@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="DELETE">
+        <access>package_private</access>
+        <authentication_type>no_authentication</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <name>DomainTools Farsight DNSDB RRDATA</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint> https://api.dnsdb.info/dnsdb/v2/lookup/</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 08:49:12</sys_created_on>
+        <sys_id>096eb05a93c00210524174418bba108e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DomainTools Farsight DNSDB RRDATA</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>sys_rest_message_096eb05a93c00210524174418bba108e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 08:49:12</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</application>
+        <file_path/>
+        <instance_id>3bcc33a11be275501024eb9b2d4bcbd2</instance_id>
+        <instance_name>dev214094</instance_name>
+        <name>sys_rest_message_096eb05a93c00210524174418bba108e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message"><sys_rest_message action="INSERT_OR_UPDATE"><access>package_private</access><authentication_type>no_authentication</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><description/><name>DomainTools Farsight DNSDB RRDATA</name><oauth2_profile/><protocol_name/><rest_endpoint> https://api.dnsdb.info/dnsdb/v2/lookup/</rest_endpoint><sys_class_name>sys_rest_message</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-02-01 08:49:12</sys_created_on><sys_id>096eb05a93c00210524174418bba108e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>DomainTools Farsight DNSDB RRDATA</sys_name><sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package><sys_policy/><sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope><sys_update_name>sys_rest_message_096eb05a93c00210524174418bba108e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-02-01 08:49:12</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mutual_auth>false</use_mutual_auth></sys_rest_message></record_update>]]></payload>
+        <payload_hash>1908018602</payload_hash>
+        <record_name>DomainTools Farsight DNSDB RRDATA</record_name>
+        <reverted_from/>
+        <source>0b8164d693400210524174418bba1034</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 08:49:12</sys_created_on>
+        <sys_id>03fef45a93c00210524174418bba1035</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d63db97bf0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 08:49:12</sys_updated_on>
+        <type>REST Message</type>
+        <update_guid>47fef45a2ec002105c9ffe37b4be6734</update_guid>
+        <update_guid_history>47fef45a2ec002105c9ffe37b4be6734:1908018602</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 08:54:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message">sys_rest_message</sys_db_object>
+        <sys_id>032a1f177d9145fe98c77857e50e9804</sys_id>
+        <sys_metadata>096eb05a93c00210524174418bba108e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DomainTools Farsight DNSDB RRDATA</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_scope_delete display_value="">553f837b88bc47c7a25aaa11390fe039</sys_scope_delete>
+        <sys_update_name>sys_rest_message_096eb05a93c00210524174418bba108e</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_096eb05a93c00210524174418bba108e">03fef45a93c00210524174418bba1035</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 08:54:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

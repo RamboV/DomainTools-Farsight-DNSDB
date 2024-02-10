@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_sec_core_integration_item_config">
+    <sn_sec_core_integration_item_config action="INSERT_OR_UPDATE">
+        <elem_type>password</elem_type>
+        <help_text/>
+        <integration display_value="DomainTools Farsight DNSDB">e545f0de93800210524174418bba1010</integration>
+        <label>DominTools Farsight API Key</label>
+        <mandatory>true</mandatory>
+        <name>apiKey</name>
+        <order>100</order>
+        <password_value>﷞﷟﷒085b3fb093c08210524174418bba1009﷬﷔1﷬﷭or7-envW0U3VYj-6dI4nbg==rrYyDibDq5PA-eDgWMzWtsiuyo040MLNRmMEBP2AM8LCoepq3mwMXzJe_iprb8PLV1tqsereh44lEYl8jkfsM3gdBMERmrc2P7qwmOD-N6Q=﷮﷯</password_value>
+        <sys_class_name>sn_sec_core_integration_item_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 08:14:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>43d6305293c00210524174418bba1007</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>apiKey</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>sn_sec_core_integration_item_config_43d6305293c00210524174418bba1007</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 09:29:04</sys_updated_on>
+        <type/>
+        <value/>
+    </sn_sec_core_integration_item_config>
+</record_update>

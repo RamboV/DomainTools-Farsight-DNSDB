@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="domain_id" label="Domain ID" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>domain_id</element>
+            <help/>
+            <hint/>
+            <label>Domain ID</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Domain ID</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Domain ID</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_domain_id_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f97b6cd293800210524174418bba10af" extends="sn_sec_cmn_enrichment_data_base" label="DomainTools Farsight  DNSDB RRSET" max_length="40" name="x_952688_dnsdb_domaintools_farsight_dnsdb_rrset" type="collection">
+        <element label="BAILIWICK" max_length="100" name="bailiwick" type="string"/>
+        <element label="COUNT" max_length="100" name="count" type="string"/>
+        <element label="TIME FIRST SEEN" max_length="100" name="first_seen" type="string"/>
+        <element label="ID" max_length="100" name="id" type="string"/>
+        <element label="TIME LAST SEEN" max_length="100" name="last_seen" type="string"/>
+        <element label="RDATA" max_length="4000" name="rdata" type="glide_list"/>
+        <element label="RRNAME" max_length="100" name="rrname" type="string"/>
+        <element label="RRTYPE" max_length="100" name="rrtype" type="string"/>
+    </element>
+</database>

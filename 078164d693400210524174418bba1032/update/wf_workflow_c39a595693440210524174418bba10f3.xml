@@ -1,0 +1,3150 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"subflows":[],"stages":{},"activities":{},"ends":["ff82a9de93440210524174418bba1058"]}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type>run_match</condition_type>
+        <description/>
+        <expected_sequences>b782a9de93440210524174418bba104e,f782a9de93440210524174418bba1059,7782a9de93440210524174418bba1052,ff82a9de93440210524174418bba1054,ff82a9de93440210524174418bba1058</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>b782a9de93440210524174418bba104e,f782a9de93440210524174418bba1059,7782a9de93440210524174418bba1052,ff82a9de93440210524174418bba1058,ff82a9de93440210524174418bba1054,bb82a9de93440210524174418bba1053,bb82a9de93440210524174418bba104f,fb82a9de93440210524174418bba105a,3b82a9de93440210524174418bba105b,7b82a9de93440210524174418bba1057,7782a9de93440210524174418bba1058,f782a9de93440210524174418bba104d,ff82a9de93440210524174418bba104e</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Enrich Observable-DomainTools Farsight DNSDB</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration display_value="2 business days by 4pm">3bf802c20a0a0b52008e2859cd8abcf2</relative_duration>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field/>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">b782a9de93440210524174418bba104e</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a59e93440210524174418bba1079</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-02 10:18:28</sys_updated_on>
+        <table>global</table>
+        <timezone/>
+        <validated>true</validated>
+        <workflow display_value="Enrich Observable-DomainTools Farsight DNSDB">c39a595693440210524174418bba10f3</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Enrich Observable-DomainTools Farsight DNSDB</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:49:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c39a595693440210524174418bba10f3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Enrich Observable-DomainTools Farsight DNSDB</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>wf_workflow_c39a595693440210524174418bba10f3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:49:53</sys_updated_on>
+        <table>global</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>b782a9de93440210524174418bba104e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=b782a9de93440210524174418bba104e"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">b782a9de93440210524174418bba104e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7b82a9de93440210524174418bba104e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Create Enrichment Data for Record">60af40560b622200263a089b37673af4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>8</databus_lookup_id>
+        <height/>
+        <input>{"domain_id":"${workflow.inputs.domain_id}","record_id":"${workflow.inputs.observable_ids}","record_table":"sn_ti_observable","enrichment_mapping_id":"${workflow.scratchpad.mapping_id}","response_content":"${workflow.scratchpad.response_data}","ref_value":"","ref_table":"","m2m_table":"sn_si_m2m_incident_enrichment","m2m_record_field":"sn_si_incident","m2m_record_id":"${workflow.inputs.task_sys_id}","m2m_enrichment_field":"sn_sec_cmn_enrichment"}</input>
+        <is_parent>false</is_parent>
+        <name>Create Enrichment Data for Record</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7b82a9de93440210524174418bba1057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>1164</x>
+        <y>234</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=7b82a9de93440210524174418bba1057"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Create Enrichment Data for Record">7b82a9de93440210524174418bba1057</activity>
+        <condition/>
+        <condition_default display_value="Failure">4a91d4560b622200263a089b37673a5f</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Failure</name>
+        <order>1</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Create Enrichment Data for Record">7b82a9de93440210524174418bba1057</activity>
+        <condition>!gs.nil(activityOutput.enrichment_record_id)</condition>
+        <condition_default display_value="Success">77df8c160b622200263a089b37673aa4</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Success</name>
+        <order>1</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7f82a9de93440210524174418bba1057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>102</x>
+        <y>702</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=ff82a9de93440210524174418bba1058"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Execution Tracking - Begin">fc9627fa0b733200263a089b37673ac3</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>7</databus_lookup_id>
+        <height/>
+        <input>{"capabilityId":"","implementationId":"${workflow.inputs.implementation_id}","taskId":"${workflow.inputs.task_sys_id}","recordTable":"sn_ti_observable","recordIds":"${workflow.inputs.observable_ids}","workflowContextId":"${context.sys_id}","workflowName":"${context.name}","parentCapabilityExecutionId":"${workflow.inputs.parent_execution_id}","domainId":"${workflow.inputs.domain_id}"}</input>
+        <is_parent>false</is_parent>
+        <name>Execution Tracking - Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>fb82a9de93440210524174418bba105a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>825</x>
+        <y>83</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=fb82a9de93440210524174418bba105a"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Execution Tracking - Begin">fb82a9de93440210524174418bba105a</activity>
+        <condition/>
+        <condition_default display_value="Error">9b692ffa0b733200263a089b37673a77</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>true</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Error</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>7382a9de93440210524174418bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Execution Tracking - Begin">fb82a9de93440210524174418bba105a</activity>
+        <condition>(!gs.nil(activityOutput.capabilityExecutionId))</condition>
+        <condition_default display_value="Success">eab6e7fa0b733200263a089b37673ae2</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Success</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba105a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Capability Execution Tracking - Complete">0d5ee2ed0bd032002e64a3e337673a81</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>10</databus_lookup_id>
+        <height/>
+        <input>{"capabilityExecutionId":"${data.get(7).capabilityExecutionId}","workflowName":"${context.name}","message":"Completed Observable Enrichment, results can be found on the given observable"}</input>
+        <is_parent>false</is_parent>
+        <name>Execution Tracking - Complete</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f782a9de93440210524174418bba104d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>1319</x>
+        <y>540</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=f782a9de93440210524174418bba104d"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Execution Tracking - Complete">f782a9de93440210524174418bba104d</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7f82a9de93440210524174418bba104d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Capability Execution Tracking - Failure">4eaea6ed0bd032002e64a3e337673a00</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>11</databus_lookup_id>
+        <height/>
+        <input>{"capabilityExecutionId":"${data.get(7).capabilityExecutionId}","errorMessage":"Error retrieving results from observable enrichment lookup","workflowName":"${context.name}"}</input>
+        <is_parent>false</is_parent>
+        <name>Execution Tracking - Failure</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7782a9de93440210524174418bba1058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>891</x>
+        <y>540</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=7782a9de93440210524174418bba1058"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Execution Tracking - Failure">7782a9de93440210524174418bba1058</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7b82a9de93440210524174418bba1058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Capability Execution Tracking - Failure">4eaea6ed0bd032002e64a3e337673a00</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>9</databus_lookup_id>
+        <height/>
+        <input>{"capabilityExecutionId":"${data.get(7).capabilityExecutionId}","errorMessage":"Error writing enrichment data","workflowName":"${context.name}"}</input>
+        <is_parent>false</is_parent>
+        <name>Execution Tracking - Failure</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba104e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>1089</x>
+        <y>539</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=ff82a9de93440210524174418bba104e"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Execution Tracking - Failure">ff82a9de93440210524174418bba104e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f382a9de93440210524174418bba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Has Enrichment been created/updated in the past 24 hours?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>525</x>
+        <y>434</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=bb82a9de93440210524174418bba1053"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba1053</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3f82a9de93440210524174418bba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba1053</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>b382a9de93440210524174418bba1054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript() {&#13;
+	var obsIds = workflow.inputs.observable_ids;&#13;
+	var domainId = workflow.inputs.domain_id;&#13;
+	var implId = workflow.inputs.implementation_id;&#13;
+	var util = new x_952688_dnsdb.DomainToolsDNSDBLookup(implId, domainId);&#13;
+	if (util.isEnrichmentUpdatedInLast24Hours(obsIds))&#13;
+		return 'yes';&#13;
+	return 'no';&#13;
+}</value>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba1053</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba1053</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3f82a9de93440210524174418bba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba1053</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba1053</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>b382a9de93440210524174418bba1054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript() {&#13;
+	var obsIds = workflow.inputs.observable_ids;&#13;
+	var domainId = workflow.inputs.domain_id;&#13;
+	var implId = workflow.inputs.implementation_id;&#13;
+	var util = new x_952688_dnsdb.DomainToolsDNSDBLookup(implId, domainId);&#13;
+	if (util.isEnrichmentUpdatedInLast24Hours(obsIds))&#13;
+		return 'yes';&#13;
+	return 'no';&#13;
+}</value>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Has Enrichment been created/updated in the past 24 hours?">bb82a9de93440210524174418bba1053</activity>
+        <condition>activity.result == 'no'</condition>
+        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>No</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3b82a9de93440210524174418bba1054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Has Enrichment been created/updated in the past 24 hours?">bb82a9de93440210524174418bba1053</activity>
+        <condition>activity.result == 'yes'</condition>
+        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Yes</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>b782a9de93440210524174418bba1054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Has more observables after filtering unsupported observables?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>f782a9de93440210524174418bba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>66</x>
+        <y>141</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=f782a9de93440210524174418bba1059"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>f782a9de93440210524174418bba1059</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>3f82a9de93440210524174418bba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>f782a9de93440210524174418bba1059</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>7b82a9de93440210524174418bba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>f782a9de93440210524174418bba1059</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript() {&#13;
+	var obsIds = workflow.inputs.observable_ids;&#13;
+	var domainId = workflow.inputs.domain_id;&#13;
+	var implId = workflow.inputs.implementation_id;&#13;
+	&#13;
+	var util = new x_952688_dnsdb.DomainToolsDNSDBLookup(implId, domainId);&#13;
+	// filter observables&#13;
+	obsIds = util.filterUnsupportedObservablesByType(obsIds);&#13;
+	obsIds = obsIds.join(','); // make string again to fit into workflow input type&#13;
+		&#13;
+	if (!gs.nil(obsIds)) {&#13;
+		workflow.inputs.observables_ids = obsIds;&#13;
+		return 'yes';&#13;
+	}&#13;
+	return 'no';&#13;
+}</value>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>f782a9de93440210524174418bba1059</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>7b82a9de93440210524174418bba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>f782a9de93440210524174418bba1059</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>3f82a9de93440210524174418bba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>f782a9de93440210524174418bba1059</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1059</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript() {&#13;
+	var obsIds = workflow.inputs.observable_ids;&#13;
+	var domainId = workflow.inputs.domain_id;&#13;
+	var implId = workflow.inputs.implementation_id;&#13;
+	&#13;
+	var util = new x_952688_dnsdb.DomainToolsDNSDBLookup(implId, domainId);&#13;
+	// filter observables&#13;
+	obsIds = util.filterUnsupportedObservablesByType(obsIds);&#13;
+	obsIds = obsIds.join(','); // make string again to fit into workflow input type&#13;
+		&#13;
+	if (!gs.nil(obsIds)) {&#13;
+		workflow.inputs.observables_ids = obsIds;&#13;
+		return 'yes';&#13;
+	}&#13;
+	return 'no';&#13;
+}</value>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Has more observables after filtering unsupported observables?">f782a9de93440210524174418bba1059</activity>
+        <condition>activity.result == 'no'</condition>
+        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>No</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>7782a9de93440210524174418bba105a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Has more observables after filtering unsupported observables?">f782a9de93440210524174418bba1059</activity>
+        <condition>activity.result == 'yes'</condition>
+        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Yes</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>f382a9de93440210524174418bba105a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Has multiple observables?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7782a9de93440210524174418bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>278</x>
+        <y>295</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=7782a9de93440210524174418bba1052"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7782a9de93440210524174418bba1052</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7f82a9de93440210524174418bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript() {&#13;
+	var obsIds = workflow.inputs.observable_ids;&#13;
+	obsIds = (obsIds + '').split(',');&#13;
+	if (!gs.nil(obsIds) &amp;&amp; obsIds.length &gt; 1) {&#13;
+		return 'yes';&#13;
+	}&#13;
+	return 'no';&#13;
+}</value>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7782a9de93440210524174418bba1052</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7782a9de93440210524174418bba1052</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f782a9de93440210524174418bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7782a9de93440210524174418bba1052</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f782a9de93440210524174418bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7782a9de93440210524174418bba1052</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7782a9de93440210524174418bba1052</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7f82a9de93440210524174418bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript() {&#13;
+	var obsIds = workflow.inputs.observable_ids;&#13;
+	obsIds = (obsIds + '').split(',');&#13;
+	if (!gs.nil(obsIds) &amp;&amp; obsIds.length &gt; 1) {&#13;
+		return 'yes';&#13;
+	}&#13;
+	return 'no';&#13;
+}</value>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Has multiple observables?">7782a9de93440210524174418bba1052</activity>
+        <condition>activity.result == 'no'</condition>
+        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>No</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f382a9de93440210524174418bba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Has multiple observables?">7782a9de93440210524174418bba1052</activity>
+        <condition>activity.result == 'yes'</condition>
+        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Yes</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7382a9de93440210524174418bba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>12</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Observable Enrichment lookup successful?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>3b82a9de93440210524174418bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>909</x>
+        <y>282</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=3b82a9de93440210524174418bba105b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>3b82a9de93440210524174418bba105b</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>3382a9de93440210524174418bba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript() {&#13;
+	var success = false;&#13;
+	&#13;
+	var implId = workflow.inputs.implementation_id;&#13;
+	var domainId = workflow.inputs.domain_id;&#13;
+	var observableIds = workflow.inputs.observable_ids;&#13;
+	var trackingId = data.get(7).capabilityExecutionId;&#13;
+	var taskSysId = workflow.inputs.task_sys_id;&#13;
+	var limit = workflow.inputs.u_limit;&#13;
+	var look_back = workflow.inputs.u_look_back;&#13;
+	var record_type = workflow.inputs.u_record_type;&#13;
+&#13;
+	var util = new x_952688_dnsdb.DomainToolsDNSDBLookup(implId, domainId);&#13;
+	if(util.isValidClass()) {&#13;
+		gs.info("inside valid class");&#13;
+		var resultObj = util.performLookup(trackingId, observableIds, domainId, taskSysId, record_type, limit, look_back, context.sys_id, context.name);&#13;
+		gs.info("after result object");&#13;
+		workflow.scratchpad.response_data = resultObj.response_data;&#13;
+		workflow.scratchpad.mapping_id = resultObj.mapping_id;&#13;
+		&#13;
+		if (!gs.nil(resultObj.success) &amp;&amp; resultObj.success + '' == 'true')&#13;
+			success = true;&#13;
+	}&#13;
+	return success;&#13;
+}&#13;
+</value>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>3b82a9de93440210524174418bba105b</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>7f82a9de93440210524174418bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>3b82a9de93440210524174418bba105b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>3b82a9de93440210524174418bba105b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>3b82a9de93440210524174418bba105b</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>7f82a9de93440210524174418bba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>3b82a9de93440210524174418bba105b</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>3382a9de93440210524174418bba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <value>answer = ifScript();&#13;
+&#13;
+function ifScript() {&#13;
+	var success = false;&#13;
+	&#13;
+	var implId = workflow.inputs.implementation_id;&#13;
+	var domainId = workflow.inputs.domain_id;&#13;
+	var observableIds = workflow.inputs.observable_ids;&#13;
+	var trackingId = data.get(7).capabilityExecutionId;&#13;
+	var taskSysId = workflow.inputs.task_sys_id;&#13;
+	var limit = workflow.inputs.u_limit;&#13;
+	var look_back = workflow.inputs.u_look_back;&#13;
+	var record_type = workflow.inputs.u_record_type;&#13;
+&#13;
+	var util = new x_952688_dnsdb.DomainToolsDNSDBLookup(implId, domainId);&#13;
+	if(util.isValidClass()) {&#13;
+		gs.info("inside valid class");&#13;
+		var resultObj = util.performLookup(trackingId, observableIds, domainId, taskSysId, record_type, limit, look_back, context.sys_id, context.name);&#13;
+		gs.info("after result object");&#13;
+		workflow.scratchpad.response_data = resultObj.response_data;&#13;
+		workflow.scratchpad.mapping_id = resultObj.mapping_id;&#13;
+		&#13;
+		if (!gs.nil(resultObj.success) &amp;&amp; resultObj.success + '' == 'true')&#13;
+			success = true;&#13;
+	}&#13;
+	return success;&#13;
+}&#13;
+</value>
+        <variable display_value="Script">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Observable Enrichment lookup successful?">3b82a9de93440210524174418bba105b</activity>
+        <condition>activity.result == 'no'</condition>
+        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>No</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>3782a9de93440210524174418bba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Observable Enrichment lookup successful?">3b82a9de93440210524174418bba105b</activity>
+        <condition>activity.result == 'yes'</condition>
+        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Yes</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>b782a9de93440210524174418bba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Parallel Flow Launcher">35ef56111b211100adca1e094f071315</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>6</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Start DomainTools Observable Enrichment</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>297</x>
+        <y>483</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=ff82a9de93440210524174418bba1054"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3382a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>100</value>
+        <variable display_value="Max flows">e44186731b211100adca1e094f0713e0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3782a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>// To access the set of completed workflows use the 'coordinator' variable.&#13;
+//&#13;
+//  var flow1Result = coordinator.getFlow(1).output;&#13;
+//&#13;
+</value>
+        <variable display_value="Finished script">e47e76101b221100adca1e094f07134e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>800</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3f82a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process finished">662e36101b221100adca1e094f0713a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7382a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">7608dbca1b121100adca1e094f071355</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7b82a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>// To access the flow that completed, use the 'flow' variable.&#13;
+//  &#13;
+//     var flowOutput = flow.output;&#13;
+//&#13;
+</value>
+        <variable display_value="Flow complete">006b9e591b221100adca1e094f0713a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7f82a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>25</value>
+        <variable display_value="Max simultaneous">7b81c6731b211100adca1e094f07136e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>b782a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Count">428bf90eff1331009267ffffffffff80</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Inputs">713142e11b211100adca1e094f0713f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f382a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process flow complete">0a2b9e591b221100adca1e094f07130e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f782a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Workflow">d698838a1b121100adca1e094f071315</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>var implsToRun = [];&#13;
+var maximumConcurrentRequests = 25;&#13;
+coordinator = new global.WorkflowCoordinator();&#13;
+&#13;
+var obsIds = workflow.inputs.observable_ids + '';&#13;
+var obsMap = {};&#13;
+&#13;
+if (!gs.nil(obsIds)) {&#13;
+    obsIds = (obsIds + '').split(',');&#13;
+    for (var i = 0; i &lt; obsIds.length; i++) {&#13;
+                var obsId = obsIds[i];&#13;
+                obsMap[obsId] = true;&#13;
+    }&#13;
+&#13;
+for (var key in obsMap) {&#13;
+        var workflowId = 'c39a595693440210524174418bba10f3'; // DomainTools Farsight DNSDB&#13;
+        var workflowGR = new GlideRecord('wf_workflow');&#13;
+        workflowGR.get(workflowId)&#13;
+        var workflowName = workflowGR.name + '';&#13;
+&#13;
+        var workflowInputs = {};&#13;
+        workflowInputs.implementation_id = workflow.inputs.implementation_id;&#13;
+        workflowInputs.parent_execution_id = workflow.inputs.parent_execution_id;&#13;
+        workflowInputs.observable_ids = key;&#13;
+        workflowInputs.task_sys_id = workflow.inputs.task_sys_id;&#13;
+        workflowInputs.domain_id = workflow.inputs.domain_id;&#13;
+        workflowInputs.limit = workflow.inputs.limit;&#13;
+        workflowInputs.look_back = workflow.inputs.look_back;&#13;
+        coordinator.add(workflowInputs, workflowName);&#13;
+  } &#13;
+}&#13;
+&#13;
+// Set the poolsize.&#13;
+coordinator.setPoolsize(maximumConcurrentRequests);&#13;
+coordinator;</value>
+        <variable display_value="Workflow">22dea7431b211100adca1e094f0713f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Inputs">713142e11b211100adca1e094f0713f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7382a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">7608dbca1b121100adca1e094f071355</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f782a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Workflow">d698838a1b121100adca1e094f071315</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>var implsToRun = [];&#13;
+var maximumConcurrentRequests = 25;&#13;
+coordinator = new global.WorkflowCoordinator();&#13;
+&#13;
+var obsIds = workflow.inputs.observable_ids + '';&#13;
+var obsMap = {};&#13;
+&#13;
+if (!gs.nil(obsIds)) {&#13;
+    obsIds = (obsIds + '').split(',');&#13;
+    for (var i = 0; i &lt; obsIds.length; i++) {&#13;
+                var obsId = obsIds[i];&#13;
+                obsMap[obsId] = true;&#13;
+    }&#13;
+&#13;
+for (var key in obsMap) {&#13;
+        var workflowId = 'c39a595693440210524174418bba10f3'; // DomainTools Farsight DNSDB&#13;
+        var workflowGR = new GlideRecord('wf_workflow');&#13;
+        workflowGR.get(workflowId)&#13;
+        var workflowName = workflowGR.name + '';&#13;
+&#13;
+        var workflowInputs = {};&#13;
+        workflowInputs.implementation_id = workflow.inputs.implementation_id;&#13;
+        workflowInputs.parent_execution_id = workflow.inputs.parent_execution_id;&#13;
+        workflowInputs.observable_ids = key;&#13;
+        workflowInputs.task_sys_id = workflow.inputs.task_sys_id;&#13;
+        workflowInputs.domain_id = workflow.inputs.domain_id;&#13;
+        workflowInputs.limit = workflow.inputs.limit;&#13;
+        workflowInputs.look_back = workflow.inputs.look_back;&#13;
+        coordinator.add(workflowInputs, workflowName);&#13;
+  } &#13;
+}&#13;
+&#13;
+// Set the poolsize.&#13;
+coordinator.setPoolsize(maximumConcurrentRequests);&#13;
+coordinator;</value>
+        <variable display_value="Workflow">22dea7431b211100adca1e094f0713f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>b782a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Count">428bf90eff1331009267ffffffffff80</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3382a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>100</value>
+        <variable display_value="Max flows">e44186731b211100adca1e094f0713e0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7f82a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>25</value>
+        <variable display_value="Max simultaneous">7b81c6731b211100adca1e094f07136e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f382a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process flow complete">0a2b9e591b221100adca1e094f07130e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7b82a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>// To access the flow that completed, use the 'flow' variable.&#13;
+//  &#13;
+//     var flowOutput = flow.output;&#13;
+//&#13;
+</value>
+        <variable display_value="Flow complete">006b9e591b221100adca1e094f0713a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>800</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3f82a9de93440210524174418bba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process finished">662e36101b221100adca1e094f0713a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ff82a9de93440210524174418bba1054</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3782a9de93440210524174418bba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>// To access the set of completed workflows use the 'coordinator' variable.&#13;
+//&#13;
+//  var flow1Result = coordinator.getFlow(1).output;&#13;
+//&#13;
+</value>
+        <variable display_value="Finished script">e47e76101b221100adca1e094f07134e</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Start DomainTools Observable Enrichment">ff82a9de93440210524174418bba1054</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f382a9de93440210524174418bba1057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Parallel Flow Launcher">35ef56111b211100adca1e094f071315</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>13</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for rate limit if applicable</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+        <x>689</x>
+        <y>298</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=bb82a9de93440210524174418bba104f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3782a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>// To access the flow that completed, use the 'flow' variable.&#13;
+//  &#13;
+//     var flowOutput = flow.output;&#13;
+//&#13;
+</value>
+        <variable display_value="Flow complete">006b9e591b221100adca1e094f0713a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3b82a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>5</value>
+        <variable display_value="Max simultaneous">7b81c6731b211100adca1e094f07136e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3f82a9de93440210524174418bba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">7608dbca1b121100adca1e094f071355</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7382a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Count">428bf90eff1331009267ffffffffff80</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7782a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Inputs">713142e11b211100adca1e094f0713f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>b382a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Workflow">d698838a1b121100adca1e094f071315</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>coordinator = new global.WorkflowCoordinator();&#13;
+&#13;
+var workflowId = '4d8cd3510b400300263a089b37673af9'; // rate limit wf&#13;
+var workflowGR = new GlideRecord('wf_workflow');&#13;
+workflowGR.get(workflowId);&#13;
+var workflowName = workflowGR.name + '';&#13;
+&#13;
+var workflowInputs = {};&#13;
+workflowInputs.implementation_id = workflow.inputs.implementation_id + '';&#13;
+workflowInputs.rate_limit_definition_id = 'c4073b950b400300263a089b37673ae7';&#13;
+workflowInputs.rate_limit_value = 6;&#13;
+        &#13;
+coordinator.add(workflowInputs, workflowName);&#13;
+&#13;
+// Set the poolsize.&#13;
+coordinator.setPoolsize(25);&#13;
+coordinator;</value>
+        <variable display_value="Workflow">22dea7431b211100adca1e094f0713f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bf82a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process flow complete">0a2b9e591b221100adca1e094f07130e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>800</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f782a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process finished">662e36101b221100adca1e094f0713a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>fb82a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>500</value>
+        <variable display_value="Max flows">e44186731b211100adca1e094f0713e0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>// To access the set of completed workflows use the 'coordinator' variable.&#13;
+//&#13;
+//  var flow1Result = coordinator.getFlow(1).output;&#13;
+//&#13;
+</value>
+        <variable display_value="Finished script">e47e76101b221100adca1e094f07134e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7782a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Inputs">713142e11b211100adca1e094f0713f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3f82a9de93440210524174418bba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Advanced">7608dbca1b121100adca1e094f071355</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>b382a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Workflow">d698838a1b121100adca1e094f071315</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bb82a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>coordinator = new global.WorkflowCoordinator();&#13;
+&#13;
+var workflowId = '4d8cd3510b400300263a089b37673af9'; // rate limit wf&#13;
+var workflowGR = new GlideRecord('wf_workflow');&#13;
+workflowGR.get(workflowId);&#13;
+var workflowName = workflowGR.name + '';&#13;
+&#13;
+var workflowInputs = {};&#13;
+workflowInputs.implementation_id = workflow.inputs.implementation_id + '';&#13;
+workflowInputs.rate_limit_definition_id = 'c4073b950b400300263a089b37673ae7';&#13;
+workflowInputs.rate_limit_value = 6;&#13;
+        &#13;
+coordinator.add(workflowInputs, workflowName);&#13;
+&#13;
+// Set the poolsize.&#13;
+coordinator.setPoolsize(25);&#13;
+coordinator;</value>
+        <variable display_value="Workflow">22dea7431b211100adca1e094f0713f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>7382a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value/>
+        <variable display_value="Count">428bf90eff1331009267ffffffffff80</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>fb82a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>500</value>
+        <variable display_value="Max flows">e44186731b211100adca1e094f0713e0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3b82a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>5</value>
+        <variable display_value="Max simultaneous">7b81c6731b211100adca1e094f07136e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bf82a9de93440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process flow complete">0a2b9e591b221100adca1e094f07130e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3782a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>// To access the flow that completed, use the 'flow' variable.&#13;
+//  &#13;
+//     var flowOutput = flow.output;&#13;
+//&#13;
+</value>
+        <variable display_value="Flow complete">006b9e591b221100adca1e094f0713a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>800</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>f782a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Process finished">662e36101b221100adca1e094f0713a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bb82a9de93440210524174418bba104f</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>ff82a9de93440210524174418bba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <value>// To access the set of completed workflows use the 'coordinator' variable.&#13;
+//&#13;
+//  var flow1Result = coordinator.getFlow(1).output;&#13;
+//&#13;
+</value>
+        <variable display_value="Finished script">e47e76101b221100adca1e094f07134e</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait for rate limit if applicable">bb82a9de93440210524174418bba104f</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>bf82a9de93440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Success">7f82a9de93440210524174418bba1057</condition>
+        <from display_value="Create Enrichment Data for Record">7b82a9de93440210524174418bba1057</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>0492a9de93440210524174418bba105e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Execution Tracking - Complete">f782a9de93440210524174418bba104d</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="No">3b82a9de93440210524174418bba1054</condition>
+        <from display_value="Has Enrichment been created/updated in the past 24 hours?">bb82a9de93440210524174418bba1053</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>3b82a9de93440210524174418bba105d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Wait for rate limit if applicable">bb82a9de93440210524174418bba104f</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Success">ff82a9de93440210524174418bba105a</condition>
+        <from display_value="Execution Tracking - Begin">fb82a9de93440210524174418bba105a</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>4492a9de93440210524174418bba105f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Observable Enrichment lookup successful?">3b82a9de93440210524174418bba105b</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="No">3782a9de93440210524174418bba105c</condition>
+        <from display_value="Observable Enrichment lookup successful?">3b82a9de93440210524174418bba105b</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>4c92a9de93440210524174418bba105d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Execution Tracking - Failure">7782a9de93440210524174418bba1058</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Yes">f382a9de93440210524174418bba105a</condition>
+        <from display_value="Has more observables after filtering unsupported observables?">f782a9de93440210524174418bba1059</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>4c92a9de93440210524174418bba105e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Has multiple observables?">7782a9de93440210524174418bba1052</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="No">f382a9de93440210524174418bba1053</condition>
+        <from display_value="Has multiple observables?">7782a9de93440210524174418bba1052</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>4c92a9de93440210524174418bba105f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Has Enrichment been created/updated in the past 24 hours?">bb82a9de93440210524174418bba1053</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Failure">ff82a9de93440210524174418bba1057</condition>
+        <from display_value="Create Enrichment Data for Record">7b82a9de93440210524174418bba1057</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>8092a9de93440210524174418bba105e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Execution Tracking - Failure">ff82a9de93440210524174418bba104e</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">7f82a9de93440210524174418bba104d</condition>
+        <from display_value="Execution Tracking - Complete">f782a9de93440210524174418bba104d</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>8092a9de93440210524174418bba105f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="End">ff82a9de93440210524174418bba1058</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">f382a9de93440210524174418bba1057</condition>
+        <from display_value="Start DomainTools Observable Enrichment">ff82a9de93440210524174418bba1054</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>8492a9de93440210524174418bba1060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="End">ff82a9de93440210524174418bba1058</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Yes">b782a9de93440210524174418bba1054</condition>
+        <from display_value="Has Enrichment been created/updated in the past 24 hours?">bb82a9de93440210524174418bba1053</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>8892a9de93440210524174418bba105d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="End">ff82a9de93440210524174418bba1058</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">f382a9de93440210524174418bba104f</condition>
+        <from display_value="Execution Tracking - Failure">ff82a9de93440210524174418bba104e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>8892a9de93440210524174418bba105e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="End">ff82a9de93440210524174418bba1058</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">7b82a9de93440210524174418bba1058</condition>
+        <from display_value="Execution Tracking - Failure">7782a9de93440210524174418bba1058</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>8892a9de93440210524174418bba105f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="End">ff82a9de93440210524174418bba1058</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">bf82a9de93440210524174418bba1051</condition>
+        <from display_value="Wait for rate limit if applicable">bb82a9de93440210524174418bba104f</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>c092a9de93440210524174418bba1060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Execution Tracking - Begin">fb82a9de93440210524174418bba105a</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">7b82a9de93440210524174418bba104e</condition>
+        <from display_value="Begin">b782a9de93440210524174418bba104e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>c492a9de93440210524174418bba105e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Has more observables after filtering unsupported observables?">f782a9de93440210524174418bba1059</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Error">7382a9de93440210524174418bba105b</condition>
+        <from display_value="Execution Tracking - Begin">fb82a9de93440210524174418bba105a</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>c492a9de93440210524174418bba105f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="End">ff82a9de93440210524174418bba1058</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Yes">b782a9de93440210524174418bba105c</condition>
+        <from display_value="Observable Enrichment lookup successful?">3b82a9de93440210524174418bba105b</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>cc92a9de93440210524174418bba105d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Create Enrichment Data for Record">7b82a9de93440210524174418bba1057</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="No">7782a9de93440210524174418bba105a</condition>
+        <from display_value="Has more observables after filtering unsupported observables?">f782a9de93440210524174418bba1059</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>cc92a9de93440210524174418bba105e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="End">ff82a9de93440210524174418bba1058</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Yes">7382a9de93440210524174418bba1053</condition>
+        <from display_value="Has multiple observables?">7782a9de93440210524174418bba1052</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:38</sys_created_on>
+        <sys_id>cc92a9de93440210524174418bba105f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:38</sys_updated_on>
+        <to display_value="Start DomainTools Observable Enrichment">ff82a9de93440210524174418bba1054</to>
+    </wf_transition>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Record Type</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value>Any</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_record_type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Record Type</label>
+        <mandatory>false</mandatory>
+        <max_length>100</max_length>
+        <model_id>c39a595693440210524174418bba10f3</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:01:27</sys_created_on>
+        <sys_id>001d591a93440210524174418bba10b6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Record Type</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>var_dictionary_001d591a93440210524174418bba10b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:05:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Domain ID</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>domain_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">domain_id</internal_type>
+        <label>Domain ID</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model_id>c39a595693440210524174418bba10f3</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:49:53</sys_created_on>
+        <sys_id>0f9a1d5693440210524174418bba1087</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Domain ID</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>var_dictionary_0f9a1d5693440210524174418bba1087</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:49:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Parent Execution ID</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_execution_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Parent Execution ID</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model_id>c39a595693440210524174418bba10f3</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:49:55</sys_created_on>
+        <sys_id>539a5d5693440210524174418bba1014</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Parent Execution ID</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>var_dictionary_539a5d5693440210524174418bba1014</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:49:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Observable IDs</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>observable_ids</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Observable IDs</label>
+        <mandatory>true</mandatory>
+        <max_length>2000</max_length>
+        <model_id>c39a595693440210524174418bba10f3</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+        <sys_id>579a1d5693440210524174418bba10ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Observable IDs</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>var_dictionary_579a1d5693440210524174418bba10ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Task Sys ID</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task_sys_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Task Sys ID</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model_id>c39a595693440210524174418bba10f3</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+        <sys_id>579a1d5693440210524174418bba10d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task Sys ID</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>var_dictionary_579a1d5693440210524174418bba10d4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Implementation ID</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>implementation_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Implementation ID</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model_id>c39a595693440210524174418bba10f3</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+        <sys_id>5b9a1d5693440210524174418bba10ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Implementation ID</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>var_dictionary_5b9a1d5693440210524174418bba10ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Look Back (In days)</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_look_back</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Look Back (In days)</label>
+        <mandatory>false</mandatory>
+        <max_length>500</max_length>
+        <model_id>c39a595693440210524174418bba10f3</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+        <sys_id>9b9a5d5693440210524174418bba1006</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Look Back (In days)</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>var_dictionary_9b9a5d5693440210524174418bba1006</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:58:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <var_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Limit</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value>50</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_limit</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Limit</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model_id>c39a595693440210524174418bba10f3</model_id>
+        <model_table>wf_workflow</model_table>
+        <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>var_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+        <sys_id>d39a1d5693440210524174418bba10c7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Limit</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>var_dictionary_d39a1d5693440210524174418bba10c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:58:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </var_dictionary>
+    <sys_documentation element="implementation_id" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>implementation_id</element>
+            <help/>
+            <hint/>
+            <label>Implementation ID</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Implementation ID</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+            <sys_id>1b9a1d5693440210524174418bba10b2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Implementation ID</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_implementation_id_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="u_max_pivot" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_max_pivot</element>
+            <help/>
+            <hint/>
+            <label>Max Pivot</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Max Pivot</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+            <sys_id>d79a1d5693440210524174418bba10cc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Max Pivot</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_u_max_pivot_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="observable_ids" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>observable_ids</element>
+            <help/>
+            <hint/>
+            <label>Observable IDs</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Observable IDs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+            <sys_id>979a1d5693440210524174418bba10bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Observable IDs</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_observable_ids_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="u_malicious_tag" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_malicious_tag</element>
+            <help/>
+            <hint/>
+            <label>Malicious Tag</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Malicious Tag</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:49:55</sys_created_on>
+            <sys_id>939a5d5693440210524174418bba100c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Malicious Tag</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_u_malicious_tag_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:49:55</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="domain_id" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>domain_id</element>
+            <help/>
+            <hint/>
+            <label>Domain ID</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Domain ID</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+            <sys_id>879a1d5693440210524174418bba10a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Domain ID</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_domain_id_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="u_limit" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_limit</element>
+            <help/>
+            <hint/>
+            <label>Limit</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Limit</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:51:20</sys_created_on>
+            <sys_id>44fa5d5693440210524174418bba1044</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Limit</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_u_limit_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:51:20</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="u_record_type" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_record_type</element>
+            <help/>
+            <hint/>
+            <label>Record Type</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Record Type</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 11:01:27</sys_created_on>
+            <sys_id>2c4d1d1a93440210524174418bba10b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Record Type</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_u_record_type_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 11:01:27</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="parent_execution_id" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>parent_execution_id</element>
+            <help/>
+            <hint/>
+            <label>Parent Execution ID</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Parent Execution ID</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:49:55</sys_created_on>
+            <sys_id>1f9a5d5693440210524174418bba1025</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Parent Execution ID</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_parent_execution_id_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:49:55</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="task_sys_id" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>task_sys_id</element>
+            <help/>
+            <hint/>
+            <label>Task Sys ID</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Task Sys ID</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:49:54</sys_created_on>
+            <sys_id>1f9a1d5693440210524174418bba10fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Task Sys ID</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_task_sys_id_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:49:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_documentation element="u_look_back" language="en" table="var__m_var_dictionary_c39a595693440210524174418bba10f3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_look_back</element>
+            <help/>
+            <hint/>
+            <label>Look Back (In days)</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_c39a595693440210524174418bba10f3</name>
+            <plural>Look Back (In days)</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:50:54</sys_created_on>
+            <sys_id>f5da519693440210524174418bba10b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Look Back (In days)</sys_name>
+            <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_c39a595693440210524174418bba10f3_u_look_back_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:50:54</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:24:37</sys_created_on>
+        <sys_id>3f82a59e93440210524174418bba1079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:24:37</sys_updated_on>
+        <workflow_version display_value="Enrich Observable-DomainTools Farsight DNSDB">bb82a59e93440210524174418bba1079</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=c39a595693440210524174418bba10f3^sys_id!=bb82a59e93440210524174418bba1079">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

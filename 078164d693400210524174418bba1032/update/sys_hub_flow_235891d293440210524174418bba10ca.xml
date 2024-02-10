@@ -1,0 +1,2313 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>local</compiler_build>
+        <copied_from>1455b04193c48210524174418bba10ee</copied_from>
+        <copied_from_name>Security Operations DomainTools </copied_from_name>
+        <description>RiskIQ WHOIS Integration V1</description>
+        <internal_name>security_operations_domaintools_farsight_dnsdb_v1</internal_name>
+        <label_cache>[{"name":"41732e1c-8b1c-4554-b536-aeca2170f6dd.record.parent_capability_execution.sys_id","label":"4 - Create Record➛Integration Capability Execution Record➛Parent capability execution➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_sec_cmn_integration_capability_execution","column_name":"sys_id"},{"name":"52462a35-32d9-4274-bc30-42251a469cd9.record.status_message","label":"13 - Update Record➛Capability Implementation Execution Record➛Status message","reference":"","reference_display":"Status message","type":"string","base_type":"string","parent_table_name":"sn_sec_cmn_capability_implementation_execution","column_name":"status_message"},{"name":"subflow.capability_implementation_execution.sys_id","label":"Input➛Capability Implementation Execution➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_sec_cmn_capability_implementation_execution","column_name":"sys_id"},{"name":"af1e7f77-8a4a-476b-9163-b9eaa60229b8.Table","label":"12 - Look Up Record➛Capability Implementation Execution Table","reference":"sn_sec_cmn_capability_implementation_execution","reference_display":"Capability Implementation Execution Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"af1e7f77-8a4a-476b-9163-b9eaa60229b8.Record","label":"12 - Look Up Record➛Capability Implementation Execution Record","reference":"sn_sec_cmn_capability_implementation_execution","reference_display":"Capability Implementation Execution Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.sighting_search_type","label":"5 - Get Input Parameters for integration workflow V1➛Sighting Search Type","reference_display":"Sighting Search Type","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"e7ae2e6b-b8a7-46d9-bcf6-edb6c6db46cb"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.email_search_item","label":"5 - Get Input Parameters for integration workflow V1➛Email Search Item","reference":"sn_sec_cmn_email_search","reference_display":"Email Search Item","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"845045e0-b2a1-4a0a-b5f8-e856d57f9d2f"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.email_search_id","label":"5 - Get Input Parameters for integration workflow V1➛Email Search Id","reference_display":"Email Search Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"5bfb2862-c579-4d74-a042-b819986723a2"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.delete_results","label":"5 - Get Input Parameters for integration workflow V1➛Delete Results","reference_display":"Delete Results","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5326e148-e20f-4567-ae16-341fa6d5037f"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.source","label":"5 - Get Input Parameters for integration workflow V1➛Source","reference_display":"Source","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cb7f1060-4a41-4cbb-b1ae-3016c11fad01"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.query","label":"5 - Get Input Parameters for integration workflow V1➛Query","reference_display":"Query","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"419c050d-1664-4d9c-b8aa-0c418d75c278"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.sighting_search_id","label":"5 - Get Input Parameters for integration workflow V1➛Sighting Search Id","reference_display":"Sighting Search Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"c7b488a8-8dbd-4da2-92e1-5f528d4db738"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.remove_host_isolation","label":"5 - Get Input Parameters for integration workflow V1➛Remove Host Isolation","reference_display":"Remove Host Isolation","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c18cd971-df1c-4d3d-ad72-0d31e86ab23d"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.configuration_items_csv","label":"5 - Get Input Parameters for integration workflow V1➛Configuration Items CSV","reference_display":"Configuration Items CSV","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"c58c78f2-0dfc-487d-9016-329afbe1a2f0"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.configuration_items_json","label":"5 - Get Input Parameters for integration workflow V1➛Configuration Items JSON","reference_display":"Configuration Items JSON","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ab1ce42e-cf01-40ca-b76f-2d730bedd64d"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.configuration_items","label":"5 - Get Input Parameters for integration workflow V1➛Configuration Items","reference":"cmdb_ci","reference_display":"Configuration Items","type":"glide_list","base_type":"glide_list","attributes":{"uiType":"glide_list","uiTypeLabel":"List","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a77b3b10-13b3-4309-a4d9-5eb649e1e7f2"}},{"name":"615d0a43-cd8f-41f3-941f-0707bd39fd31.table_name","label":"9.1.2.1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"615d0a43-cd8f-41f3-941f-0707bd39fd31.record","label":"9.1.2.1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.capability_implementation_execution","label":"Input➛Capability Implementation Execution","reference":"sn_sec_cmn_capability_implementation_execution","reference_display":"Capability Implementation Execution","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1d89343b-4cdf-47db-8608-9db51577d25f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"52462a35-32d9-4274-bc30-42251a469cd9.table_name","label":"13 - Update Record➛Capability Implementation Execution Table","reference":"sn_sec_cmn_capability_implementation_execution","reference_display":"Capability Implementation Execution Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"52462a35-32d9-4274-bc30-42251a469cd9.record","label":"13 - Update Record➛Capability Implementation Execution Record","reference":"sn_sec_cmn_capability_implementation_execution","reference_display":"Capability Implementation Execution Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"73cded08-b733-4666-8a79-3945d4dd9fe9.item.status_message","label":"10 - For Each➛Integration Capability Execution Record➛Status message","reference":"","reference_display":"Status message","type":"string","base_type":"string","parent_table_name":"sn_sec_cmn_integration_capability_execution","column_name":"status_message"},{"name":"8386329c-9852-4068-8b1b-c10399182e04.table_name","label":"9.1.1➛Integration Capability Execution Table","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8386329c-9852-4068-8b1b-c10399182e04.record","label":"9.1.1➛Integration Capability Execution Record","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"73cded08-b733-4666-8a79-3945d4dd9fe9.item","label":"10 - For Each➛Integration Capability Execution Record","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"73cded08-b733-4666-8a79-3945d4dd9fe9.item.state","label":"10 - For Each➛Integration Capability Execution Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"sn_sec_cmn_integration_capability_execution","column_name":"state","choices":[{"label":"-- None --","image":"","reference":false,"used":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"Started","image":"","reference":false,"used":false,"rawLabel":"Started","selected":false,"missing":false,"value":"started","parameters":{"name":"sn_sec_cmn_integration_capability_execution"}},{"label":"Complete","image":"","reference":false,"used":false,"rawLabel":"Complete","selected":false,"missing":false,"value":"complete","parameters":{"name":"sn_sec_cmn_integration_capability_execution"}},{"label":"Error","image":"","reference":false,"used":false,"rawLabel":"Error","selected":false,"missing":false,"value":"error","parameters":{"name":"sn_sec_cmn_integration_capability_execution"}},{"label":"Unknown","image":"","reference":false,"used":false,"rawLabel":"Unknown","selected":false,"missing":false,"value":"unknown","parameters":{"name":"sn_sec_cmn_integration_capability_execution"}},{"label":"Waiting","image":"","reference":false,"used":false,"rawLabel":"Waiting","selected":false,"missing":false,"value":"waiting","parameters":{"name":"sn_sec_cmn_integration_capability_execution"}}]},{"name":"b10abc89-451b-4ea2-a6eb-9721ed3cc54c.Count","label":"9 - Look Up Records➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b10abc89-451b-4ea2-a6eb-9721ed3cc54c.Table","label":"9 - Look Up Records➛Integration Capability Execution Table","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b10abc89-451b-4ea2-a6eb-9721ed3cc54c.Records","label":"9 - Look Up Records➛Integration Capability Execution Records","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.observables_json","label":"5 - Get Input Parameters for integration workflow V1➛Observables JSON","reference_display":"Observables JSON","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"25cd636d-e629-432c-97c6-b104d23edc44"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.observables_csv","label":"5 - Get Input Parameters for integration workflow V1➛Observables CSV","reference_display":"Observables CSV","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6f151f65-8bd8-42e6-b1ca-561bbbfbdbe1"}},{"name":"8f6cbdec-d50f-46bc-8fe8-aa35e6b665aa.Record.integration.sys_id","label":"2 - Look Up Record➛Capability Implementation Record➛Configuration➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_sec_core_integration_item","column_name":"sys_id"},{"name":"d8a49f10-9452-460d-bd47-be158dbf608a.Table","label":"3 - Look Up Record➛Integration Capability Implementation Table","reference":"sn_sec_cmn_integration_capability_implementation","reference_display":"Integration Capability Implementation Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"d8a49f10-9452-460d-bd47-be158dbf608a.Record","label":"3 - Look Up Record➛Integration Capability Implementation Record","reference":"sn_sec_cmn_integration_capability_implementation","reference_display":"Integration Capability Implementation Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.capability_implementation_execution.capability_implementation.sys_id","label":"Input➛Capability Implementation Execution➛Capability Implementation➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_sec_cmn_capability_implementation","column_name":"sys_id"},{"name":"8f6cbdec-d50f-46bc-8fe8-aa35e6b665aa.Table","label":"2 - Look Up Record➛Capability Implementation Table","reference":"sn_sec_cmn_capability_implementation","reference_display":"Capability Implementation Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"8f6cbdec-d50f-46bc-8fe8-aa35e6b665aa.Record","label":"2 - Look Up Record➛Capability Implementation Record","reference":"sn_sec_cmn_capability_implementation","reference_display":"Capability Implementation Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"41732e1c-8b1c-4554-b536-aeca2170f6dd.record","label":"4 - Create Record➛Integration Capability Execution Record","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"41732e1c-8b1c-4554-b536-aeca2170f6dd.table_name","label":"4 - Create Record➛Integration Capability Execution Table","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.task","label":"Input➛Task","reference":"task","reference_display":"Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"274b984a-dcc9-4b89-9463-6671ed4a8573","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.task.sys_domain","label":"Input➛Task➛Domain","reference":"sys_user_group","reference_display":"Group","type":"domain_id","base_type":"domain_id","parent_table_name":"task","column_name":"sys_domain"},{"name":"subflow.task.sys_id","label":"Input➛Task➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"task","column_name":"sys_id"},{"name":"d8a49f10-9452-460d-bd47-be158dbf608a.Record.sys_id","label":"3 - Look Up Record➛Integration Capability Implementation Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_sec_cmn_integration_capability_implementation","column_name":"sys_id"},{"name":"2e9a5e6c-71a3-42de-97b2-9d68825bdc5c.state","label":"5➛State","reference_display":"State","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"2e9a5e6c-71a3-42de-97b2-9d68825bdc5c.context","label":"5➛Context","reference":"wf_context","reference_display":"Workflow context","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"2e9a5e6c-71a3-42de-97b2-9d68825bdc5c.result","label":"5➛Result","reference_display":"Result","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"2e9a5e6c-71a3-42de-97b2-9d68825bdc5c.returnval","label":"5➛Return Value","reference_display":"Return Value","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"86a65bef-64cd-4fcf-8988-26034629c3af.record","label":"7 - Update Record➛Integration Capability Execution Record","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"86a65bef-64cd-4fcf-8988-26034629c3af.table_name","label":"7 - Update Record➛Integration Capability Execution Table","reference":"sn_sec_cmn_integration_capability_execution","reference_display":"Integration Capability Execution Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.observables","label":"5 - Get Input Parameters for integration workflow V1➛Observables","reference":"sn_ti_observable","reference_display":"Observables","type":"glide_list","base_type":"glide_list","attributes":{"uiType":"glide_list","uiTypeLabel":"List","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c8dbe2c1-0d0e-4bea-9e10-827ed0cc682e"}},{"name":"subflow.input_parameters","label":"Input➛Input Parameters","reference":"","reference_display":"","type":"json","base_type":"json","column_name":"","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f500535d-eeca-4572-9c7c-d169d0bad8cc","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"41732e1c-8b1c-4554-b536-aeca2170f6dd.record.sys_id","label":"4 - Create Record➛Integration Capability Execution Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_sec_cmn_integration_capability_execution","column_name":"sys_id"},{"name":"d8a49f10-9452-460d-bd47-be158dbf608a.Record.integration.sys_id","label":"3 - Look Up Record➛Integration Capability Implementation Record➛Integration➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_sec_core_integration_item","column_name":"sys_id"},{"name":"a77bc3b9-941f-459a-8936-1f55009e98d3.state","label":"6 - Call a Workflow➛State","reference_display":"State","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a77bc3b9-941f-459a-8936-1f55009e98d3.context","label":"6 - Call a Workflow➛Context","reference":"wf_context","reference_display":"Context","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a77bc3b9-941f-459a-8936-1f55009e98d3.result","label":"6 - Call a Workflow➛Result","reference_display":"Result","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a77bc3b9-941f-459a-8936-1f55009e98d3.returnval","label":"6 - Call a Workflow➛Return Value","reference_display":"Return Value","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"subflow.domain_id","label":"Input➛Domain Id","reference":"","reference_display":"","type":"domain_id","base_type":"domain_id","column_name":"","attributes":{"uiType":"domain_id","uiTypeLabel":"Domain ID","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"43fe970f-a369-4063-9cef-c58253fa97f6","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Security Operations DomainTools Farsight DNSDB V1</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>235891d293440210524174418bba10ca</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Security Operations DomainTools Farsight DNSDB V1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>sys_hub_flow_235891d293440210524174418bba10ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:58</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=235891d293440210524174418bba10ca"/>
+    <sys_variable_value action="delete_multiple" query="document_key=235891d293440210524174418bba10ca"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_235891d293440210524174418bba10ca^id=235891d293440210524174418bba10ca"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=235891d293440210524174418bba10ca"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=235891d293440210524174418bba10ca"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=235891d293440210524174418bba10ca^sys_idNOT INaf5891d293440210524174418bba10ca"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>235891d293440210524174418bba10ca</id>
+        <name>Security Operations DomainTools Farsight DNSDB V1</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:06</sys_created_on>
+        <sys_id>af5891d293440210524174418bba10ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:06</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=af5891d293440210524174418bba10ca"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=235891d293440210524174418bba10ca^sys_idNOT IN410ed95a93440210524174418bba101b,723ad15693440210524174418bba10c0,735891d293440210524174418bba10eb,775891d293440210524174418bba10ef,7b5891d293440210524174418bba10f3,f358d1d293440210524174418bba1004,fa3ad15693440210524174418bba10c6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0cb9e7e9-74a8-428c-ba45-23767a684b8b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>Any</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record_type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Record Type</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:04:46</sys_created_on>
+        <sys_id>410ed95a93440210524174418bba101b</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=dba3b7af-1e8d-49ca-9da7-58b544902771</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>50</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>limit</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Limit</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:48:14</sys_created_on>
+        <sys_id>723ad15693440210524174418bba10c0</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=f500535d-eeca-4572-9c7c-d169d0bad8cc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>input_parameters</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="JSON">json</internal_type>
+        <label>Input Parameters</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:06</sys_created_on>
+        <sys_id>735891d293440210524174418bba10eb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:04:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=274b984a-dcc9-4b89-9463-6671ed4a8573</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>task</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Task</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="Task" name="task">task</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:06</sys_created_on>
+        <sys_id>775891d293440210524174418bba10ef</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:04:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1d89343b-4cdf-47db-8608-9db51577d25f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_sec_cmn_capability_implementation_execution</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>capability_implementation_execution</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Capability Implementation Execution</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sn_sec_cmn_capability_implementation_execution">sn_sec_cmn_capability_implementation_execution</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:06</sys_created_on>
+        <sys_id>7b5891d293440210524174418bba10f3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:04:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=domain_id,uiTypeLabel=Domain ID,uiUniqueId=43fe970f-a369-4063-9cef-c58253fa97f6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>domain_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">domain_id</internal_type>
+        <label>Domain Id</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>7</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>f358d1d293440210524174418bba1004</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:04:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=382cdd44-ea0f-4d2f-adb6-6e75fcfe0ae3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>look_back</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Look Back (In days)</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:48:14</sys_created_on>
+        <sys_id>fa3ad15693440210524174418bba10c6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:04:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=235891d293440210524174418bba10ca^sys_idNOT IN3358d1d293440210524174418bba1029,7f58d1d293440210524174418bba102d,b358d1d293440210524174418bba100a"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=13d67474-efb5-497e-a970-cfdccc25639a</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Status Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>3358d1d293440210524174418bba1029</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=43309cb5-5639-411c-add4-1d71903deb33</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field>state</choice_field>
+        <choice_table>sn_sec_cmn_capability_implementation_execution</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>state</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>State</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>7f58d1d293440210524174418bba102d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=12137f07-ab94-4e3d-bd36-6fe73111e0ec</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>results</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="JSON">json</internal_type>
+        <label>Results</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</model>
+        <model_id>235891d293440210524174418bba10ca</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>b358d1d293440210524174418bba100a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=235891d293440210524174418bba10ca"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=235891d293440210524174418bba10ca^sys_idNOT IN0468d1d293440210524174418bba1069,0868d1d293440210524174418bba1055,4c68d1d293440210524174418bba105f,5868d1d293440210524174418bba108e,8068d1d293440210524174418bba106f,8868d1d293440210524174418bba1080,9c68d1d293440210524174418bba1097,9c68d1d293440210524174418bba109d,d068d1d293440210524174418bba1086"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>0468d1d293440210524174418bba1069</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <ui_id>d8a49f10-9452-460d-bd47-be158dbf608a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0468d1d293440210524174418bba1069"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0468d1d293440210524174418bba1069</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>0068d1d293440210524174418bba106b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>sn_sec_cmn_integration_capability_implementation</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0468d1d293440210524174418bba1069"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>0468d1d293440210524174418bba1069</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>c868d1d293440210524174418bba106a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>integration={{8f6cbdec-d50f-46bc-8fe8-aa35e6b665aa.Record.integration.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>0468d1d293440210524174418bba1069</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>8c68d1d293440210524174418bba106a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0468d1d293440210524174418bba1069"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0468d1d293440210524174418bba1069"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Add Worknote Link to Context">fd4a0fb70f003300ecf0cc52ff767e2a</action_type>
+        <action_type_parent display_value="Add Worknote Link to Context">ae790f770f003300ecf0cc52ff767efa</action_type_parent>
+        <comment/>
+        <compiled_snapshot>fd4a0fb70f003300ecf0cc52ff767e2a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>0868d1d293440210524174418bba1055</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <ui_id>d3dd125e-c85e-4953-8674-87b3147eec7f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0868d1d293440210524174418bba1055"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0868d1d293440210524174418bba1055</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>4468d1d293440210524174418bba1058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <value>sn_sec_cmn_capability_implementation_execution</value>
+        <variable display_value="Table">f14a0fb70f003300ecf0cc52ff767e2c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0868d1d293440210524174418bba1055</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>8068d1d293440210524174418bba1058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <value>flow_context_link</value>
+        <variable display_value="Journal Field">ca4a0fb70f003300ecf0cc52ff767e45</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0868d1d293440210524174418bba1055"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>0868d1d293440210524174418bba1055</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>8868d1d293440210524174418bba1057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fd4a0fb70f003300ecf0cc52ff767e2a</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>0868d1d293440210524174418bba1055</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>0068d1d293440210524174418bba1058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fd4a0fb70f003300ecf0cc52ff767e2a</table>
+        <value>{{subflow.capability_implementation_execution}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>0868d1d293440210524174418bba1055</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>4c68d1d293440210524174418bba1057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fd4a0fb70f003300ecf0cc52ff767e2a</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0868d1d293440210524174418bba1055"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0868d1d293440210524174418bba1055"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>4c68d1d293440210524174418bba105f</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <ui_id>8f6cbdec-d50f-46bc-8fe8-aa35e6b665aa</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4c68d1d293440210524174418bba105f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4c68d1d293440210524174418bba105f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>8c68d1d293440210524174418bba1061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>sn_sec_cmn_capability_implementation</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4c68d1d293440210524174418bba105f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>4c68d1d293440210524174418bba105f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>4868d1d293440210524174418bba1061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{subflow.capability_implementation_execution.capability_implementation.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>4c68d1d293440210524174418bba105f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>0c68d1d293440210524174418bba1061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4c68d1d293440210524174418bba105f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4c68d1d293440210524174418bba105f"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>9</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>5868d1d293440210524174418bba108e</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:58</sys_updated_on>
+        <ui_id>b10abc89-451b-4ea2-a6eb-9721ed3cc54c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5868d1d293440210524174418bba108e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5868d1d293440210524174418bba108e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>1868d1d293440210524174418bba1090</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>sn_sec_cmn_integration_capability_execution</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5868d1d293440210524174418bba108e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>5868d1d293440210524174418bba108e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>d068d1d293440210524174418bba1090</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>parent_capability_execution={{41732e1c-8b1c-4554-b536-aeca2170f6dd.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5868d1d293440210524174418bba108e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>9468d1d293440210524174418bba1090</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5868d1d293440210524174418bba108e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5868d1d293440210524174418bba108e"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>8068d1d293440210524174418bba106f</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <ui_id>41732e1c-8b1c-4554-b536-aeca2170f6dd</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8068d1d293440210524174418bba106f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8068d1d293440210524174418bba106f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>c868d1d293440210524174418bba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>sn_sec_cmn_integration_capability_execution</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8068d1d293440210524174418bba106f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>8068d1d293440210524174418bba106f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>8468d1d293440210524174418bba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>8068d1d293440210524174418bba106f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>4868d1d293440210524174418bba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>capability={"display":"Enrich Observable","value":"9ad183640b1003009f66e94685673af4"}^capability_implementation={{d8a49f10-9452-460d-bd47-be158dbf608a.Record}}^task={{subflow.task}}^state=started</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8068d1d293440210524174418bba106f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8068d1d293440210524174418bba106f"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Input Parameters for integration workflow V1">69f66f640b15001099b8ea7885673a7c</action_type>
+        <action_type_parent display_value="Get Input Parameters for integration workflow V1">f3d5efe00b15001099b8ea7885673a28</action_type_parent>
+        <comment/>
+        <compiled_snapshot>69f66f640b15001099b8ea7885673a7c</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>8868d1d293440210524174418bba1080</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <ui_id>7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8868d1d293440210524174418bba1080"/>
+    <sys_element_mapping action="delete_multiple" query="id=8868d1d293440210524174418bba1080"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>input_parameters</field>
+        <id>8868d1d293440210524174418bba1080</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>8c68d1d293440210524174418bba1081</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_69f66f640b15001099b8ea7885673a7c</table>
+        <value>{{subflow.input_parameters}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8868d1d293440210524174418bba1080"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8868d1d293440210524174418bba1080"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>12</order>
+        <parent_ui_id>f4819c8a-ffda-465d-adf3-cb843a8941be</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>9c68d1d293440210524174418bba1097</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:58</sys_updated_on>
+        <ui_id>af1e7f77-8a4a-476b-9163-b9eaa60229b8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9c68d1d293440210524174418bba1097"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9c68d1d293440210524174418bba1097</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>9868d1d293440210524174418bba1099</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>sn_sec_cmn_capability_implementation_execution</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9c68d1d293440210524174418bba1097"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>9c68d1d293440210524174418bba1097</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>5468d1d293440210524174418bba1099</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{subflow.capability_implementation_execution.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>9c68d1d293440210524174418bba1097</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>1868d1d293440210524174418bba1099</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9c68d1d293440210524174418bba1097"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9c68d1d293440210524174418bba1097"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>13</order>
+        <parent_ui_id>f4819c8a-ffda-465d-adf3-cb843a8941be</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>9c68d1d293440210524174418bba109d</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:58</sys_updated_on>
+        <ui_id>52462a35-32d9-4274-bc30-42251a469cd9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9c68d1d293440210524174418bba109d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9c68d1d293440210524174418bba109d</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>5068d1d293440210524174418bba10a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>sn_sec_cmn_capability_implementation_execution</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9c68d1d293440210524174418bba109d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>9c68d1d293440210524174418bba109f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>state=ERROR^status_message=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9c68d1d293440210524174418bba109d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>9c68d1d293440210524174418bba109d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>1c68d1d293440210524174418bba109f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{subflow.capability_implementation_execution}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>9c68d1d293440210524174418bba109d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>9468d1d293440210524174418bba109f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>9c68d1d293440210524174418bba109d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>5868d1d293440210524174418bba109f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9c68d1d293440210524174418bba109d^sys_idNOT IN9c68d1d293440210524174418bba109e"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>9c68d1d293440210524174418bba109d</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"status_message":{"scriptActive":true,"script":"var statusMessage \u003d fd_data._10_1_1__look_up_record.record.status_message;\nvar workflowContextId \u003d fd_data._10__for_each.item.wf_context.sys_id;\nvar capImplExecLink;\nif(!gs.nil(workflowContextId)){\n     capImplExecLink \u003d \"[code]\u003ca href\u003d\u0027/context_workflow.do?sysparm_stack\u003dno\u0026sysparm_show_all\u003dtrue\u0026sysparm_sys_id\u003d\" + workflowContextId + \"\u0027\u003e\" + fd_data._10__for_each.item.wf_context.name + \"\u003c/a\u003e[/code]\";\n}\nvar message \u003d fd_data._10__for_each.item.status_message;\nif(!gs.nil(capImplExecLink))\n    message \u003d capImplExecLink + \" \" + fd_data._10__for_each.item.status_message;\n  \nif (gs.nil(statusMessage))\n    statusMessage \u003d message;\nelse\n    statusMessage \u003d statusMessage + \"\\n\" + message;\n\nreturn statusMessage;\n","savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>9c68d1d293440210524174418bba109e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9c68d1d293440210524174418bba109d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment>Set the state to complete.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <order>7</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>d068d1d293440210524174418bba1086</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <ui_id>86a65bef-64cd-4fcf-8988-26034629c3af</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d068d1d293440210524174418bba1086"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d068d1d293440210524174418bba1086</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>1468d1d293440210524174418bba1088</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>sn_sec_cmn_integration_capability_execution</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d068d1d293440210524174418bba1086</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>5068d1d293440210524174418bba1088</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <value>state=complete</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d068d1d293440210524174418bba1086"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>d068d1d293440210524174418bba1086</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>dc68d1d293440210524174418bba1087</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{41732e1c-8b1c-4554-b536-aeca2170f6dd.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>d068d1d293440210524174418bba1086</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>5868d1d293440210524174418bba1087</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>d068d1d293440210524174418bba1086</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:08</sys_created_on>
+        <sys_id>1c68d1d293440210524174418bba1087</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d068d1d293440210524174418bba1086"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d068d1d293440210524174418bba1086"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=235891d293440210524174418bba10ca"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=235891d293440210524174418bba10ca^sys_idNOT IN0c68d1d293440210524174418bba1046,7b58d1d293440210524174418bba1038,8068d1d293440210524174418bba104e,8468d1d293440210524174418bba104a,c468d1d293440210524174418bba1042"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2855f04193c48210524174418bba1067</block>
+        <comment>Look for errors in the WF instances that ran.</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>0c68d1d293440210524174418bba1046</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:58</sys_updated_on>
+        <ui_id>73cded08-b733-4666-8a79-3945d4dd9fe9</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0c68d1d293440210524174418bba1046"/>
+    <sys_element_mapping action="delete_multiple" query="id=0c68d1d293440210524174418bba1046"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>0c68d1d293440210524174418bba1046</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>4868d1d293440210524174418bba1049</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{b10abc89-451b-4ea2-a6eb-9721ed3cc54c.Records}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_235891d293440210524174418bba10ca^id=0c68d1d293440210524174418bba1046"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0c68d1d293440210524174418bba1046"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0c68d1d293440210524174418bba1046"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a855f04193c48210524174418bba105a</block>
+        <comment>Call the DomainTools Farsight DNSDB workflow</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Call a Workflow">e6edace2733203006715b45a4cf6a7b2</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>7b58d1d293440210524174418bba1038</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:57</sys_updated_on>
+        <ui_id>a77bc3b9-941f-459a-8936-1f55009e98d3</ui_id>
+        <workflow_inputs/>
+        <workflow_inputs/>
+        <workflow_reference display_value="Enrich Observable-DomainTools Farsight DNSDB">c39a595693440210524174418bba10f3</workflow_reference>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=7b58d1d293440210524174418bba1038"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>7b58d1d293440210524174418bba1038</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>8c68d1d293440210524174418bba103f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait?">4aa624e8734303006715b45a4cf6a785</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_e6edace2733203006715b45a4cf6a7b2^id=7b58d1d293440210524174418bba1038"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_235891d293440210524174418bba10ca^id=7b58d1d293440210524174418bba1038"/>
+    <sys_element_mapping action="delete_multiple" query="id=7b58d1d293440210524174418bba1038"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>domain_id</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>0c68d1d293440210524174418bba1040</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_var_dictionary_aec7bcc193c48210524174418bba10b4</table>
+        <value>{{subflow.domain_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>domain_id</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:06:17</sys_created_on>
+        <sys_id>d75ed19a93440210524174418bba1064</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:06:17</sys_updated_on>
+        <table>var__m_var_dictionary_c39a595693440210524174418bba10f3</table>
+        <value>{{subflow.domain_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>implementation_id</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>cc68d1d293440210524174418bba1040</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_var_dictionary_aec7bcc193c48210524174418bba10b4</table>
+        <value>{{d8a49f10-9452-460d-bd47-be158dbf608a.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>implementation_id</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:10:05</sys_created_on>
+        <sys_id>3a3f95da93440210524174418bba1063</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:05</sys_updated_on>
+        <table>var__m_var_dictionary_c39a595693440210524174418bba10f3</table>
+        <value>{{d8a49f10-9452-460d-bd47-be158dbf608a.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>observable_ids</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>8068d1d293440210524174418bba1041</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_var_dictionary_aec7bcc193c48210524174418bba10b4</table>
+        <value>{{7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.observables_csv}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>observable_ids</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:10:05</sys_created_on>
+        <sys_id>fe3f95da93440210524174418bba1063</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:05</sys_updated_on>
+        <table>var__m_var_dictionary_c39a595693440210524174418bba10f3</table>
+        <value>{{7eaa66fa-bd7c-4dda-ac13-4d90b97f05ed.observables_csv}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>parent_execution_id</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>0868d1d293440210524174418bba1041</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_var_dictionary_aec7bcc193c48210524174418bba10b4</table>
+        <value>{{41732e1c-8b1c-4554-b536-aeca2170f6dd.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>parent_execution_id</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:10:05</sys_created_on>
+        <sys_id>b23f95da93440210524174418bba1064</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:05</sys_updated_on>
+        <table>var__m_var_dictionary_c39a595693440210524174418bba10f3</table>
+        <value>{{41732e1c-8b1c-4554-b536-aeca2170f6dd.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_sys_id</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:10:05</sys_created_on>
+        <sys_id>763f95da93440210524174418bba1064</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:05</sys_updated_on>
+        <table>var__m_var_dictionary_c39a595693440210524174418bba10f3</table>
+        <value>{{subflow.task.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_sys_id</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>4468d1d293440210524174418bba1041</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_var_dictionary_aec7bcc193c48210524174418bba10b4</table>
+        <value>{{subflow.task.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait</field>
+        <id>7b58d1d293440210524174418bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>0868d1d293440210524174418bba103f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_e6edace2733203006715b45a4cf6a7b2</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=7b58d1d293440210524174418bba1038"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7b58d1d293440210524174418bba1038^sys_idNOT IN935ed19a93440210524174418bba1062"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>domain_id</input_name>
+        <instance>7b58d1d293440210524174418bba1038</instance>
+        <referenced_table>sys_hub_flow_logic</referenced_table>
+        <script>{"domain_id":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:06:17</sys_created_on>
+        <sys_id>935ed19a93440210524174418bba1062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:06:17</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">ac55f04193c48210524174418bba106e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned>status_message,state</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id>f4819c8a-ffda-465d-adf3-cb843a8941be</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>8068d1d293440210524174418bba104e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:58</sys_updated_on>
+        <ui_id>31fac351-f3e8-403e-b7ca-b26422f52421</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=8068d1d293440210524174418bba104e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>8068d1d293440210524174418bba104e</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>4068d1d293440210524174418bba1051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <value>ERROR</value>
+        <variable display_value="State">7f58d1d293440210524174418bba102d</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8068d1d293440210524174418bba104e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>state</field>
+        <id>8068d1d293440210524174418bba104e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>cc68d1d293440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status_message</field>
+        <id>8068d1d293440210524174418bba104e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>0c68d1d293440210524174418bba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</table>
+        <value>{{52462a35-32d9-4274-bc30-42251a469cd9.record.status_message}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8068d1d293440210524174418bba104e"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8068d1d293440210524174418bba104e"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a055f04193c48210524174418bba106b</block>
+        <comment>Set the state and status message.</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>73cded08-b733-4666-8a79-3945d4dd9fe9</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>8468d1d293440210524174418bba104a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:58</sys_updated_on>
+        <ui_id>f4819c8a-ffda-465d-adf3-cb843a8941be</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=8468d1d293440210524174418bba104a"/>
+    <sys_element_mapping action="delete_multiple" query="id=8468d1d293440210524174418bba104a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>8468d1d293440210524174418bba104a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>4468d1d293440210524174418bba104d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{73cded08-b733-4666-8a79-3945d4dd9fe9.item.state}}=error</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_235891d293440210524174418bba10ca^id=8468d1d293440210524174418bba104a"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8468d1d293440210524174418bba104a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8468d1d293440210524174418bba104a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e055f04193c48210524174418bba1063</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Security Operations DomainTools Farsight DNSDB V1">235891d293440210524174418bba10ca</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>8</order>
+        <outputs_assigned>status_message,state</outputs_assigned>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>c468d1d293440210524174418bba1042</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:10:58</sys_updated_on>
+        <ui_id>85f00040-50a1-47e1-8738-d1cfd0b1a5f0</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c468d1d293440210524174418bba1042"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>c468d1d293440210524174418bba1042</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>8c68d1d293440210524174418bba1045</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <value>COMPLETE</value>
+        <variable display_value="State">7f58d1d293440210524174418bba102d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>c468d1d293440210524174418bba1042</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>c868d1d293440210524174418bba1045</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <value>Completed successful call to RiskIQ WHOIS workflow.</value>
+        <variable display_value="Status Message">3358d1d293440210524174418bba1029</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_235891d293440210524174418bba10ca^id=c468d1d293440210524174418bba1042"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c468d1d293440210524174418bba1042"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c468d1d293440210524174418bba1042"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=235891d293440210524174418bba10ca"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=235891d293440210524174418bba10ca"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_235891d293440210524174418bba10ca^sys_idNOT IN010ed95a93440210524174418bba1021,323ad15693440210524174418bba10c9,3758d1d293440210524174418bba1003,3b58d1d293440210524174418bba1006,3e3ad15693440210524174418bba10c5,b75891d293440210524174418bba10ee,bb5891d293440210524174418bba10f2"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>record_type</element>
+        <help/>
+        <hint/>
+        <label>Record Type</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:04:46</sys_created_on>
+        <sys_id>010ed95a93440210524174418bba1021</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:04:46</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>look_back</element>
+        <help/>
+        <hint/>
+        <label>Look Back (In days)</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:48:14</sys_created_on>
+        <sys_id>323ad15693440210524174418bba10c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:48:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>capability_implementation_execution</element>
+        <help/>
+        <hint/>
+        <label>Capability Implementation Execution</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>3758d1d293440210524174418bba1003</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>domain_id</element>
+        <help/>
+        <hint/>
+        <label>Domain Id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>3b58d1d293440210524174418bba1006</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>limit</element>
+        <help/>
+        <hint>Number of record</hint>
+        <label>Limit</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:48:14</sys_created_on>
+        <sys_id>3e3ad15693440210524174418bba10c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:48:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>input_parameters</element>
+        <help/>
+        <hint/>
+        <label>Input Parameters</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:06</sys_created_on>
+        <sys_id>b75891d293440210524174418bba10ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>task</element>
+        <help/>
+        <hint/>
+        <label>Task</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:06</sys_created_on>
+        <sys_id>bb5891d293440210524174418bba10f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_235891d293440210524174418bba10ca"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_235891d293440210524174418bba10ca^sys_idNOT IN7358d1d293440210524174418bba1028,7758d1d293440210524174418bba1034,bf58d1d293440210524174418bba102c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>results</element>
+        <help/>
+        <hint/>
+        <label>Results</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>7358d1d293440210524174418bba1028</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>state</element>
+        <help/>
+        <hint/>
+        <label>State</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>7758d1d293440210524174418bba1034</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>status_message</element>
+        <help/>
+        <hint/>
+        <label>Status Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+        <sys_id>bf58d1d293440210524174418bba102c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_235891d293440210524174418bba10ca^sys_idNOT INb758d1d293440210524174418bba102f,7f58d1d293440210524174418bba102f,3758d1d293440210524174418bba1030,fb58d1d293440210524174418bba1030,b358d1d293440210524174418bba1031,7b58d1d293440210524174418bba1031"/>
+    <sys_choice field="state" table="var__m_sys_hub_flow_output_235891d293440210524174418bba10ca">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Queued</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b758d1d293440210524174418bba102f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+            <value>QUEUED</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>In Progress</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7f58d1d293440210524174418bba102f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+            <value>IN_PROGRESS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Waiting</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3758d1d293440210524174418bba1030</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+            <value>WAITING</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Complete</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fb58d1d293440210524174418bba1030</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+            <value>COMPLETE</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Error</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b358d1d293440210524174418bba1031</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+            <value>ERROR</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancelled</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_235891d293440210524174418bba10ca</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-02-01 10:40:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7b58d1d293440210524174418bba1031</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-02-01 10:40:07</sys_updated_on>
+            <value>CANCELLED</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=235891d293440210524174418bba10ca"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=235891d293440210524174418bba10ca"/>
+</record_update>

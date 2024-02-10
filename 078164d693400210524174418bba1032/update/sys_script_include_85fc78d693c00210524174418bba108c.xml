@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_952688_dnsdb.DomainToolsFarsightDNSDBConfiguration</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>DomainToolsFarsightDNSDBConfiguration</name>
+        <script><![CDATA[var DomainToolsDNSDBLookup = Class.create();
+DomainToolsDNSDBLookup.prototype = {
+	_USERNAME: null,
+	_API_KEY: null,
+	_DOMAIN_ID: 'global',
+	_RRSET_REST_MSG_NAME: 'DomainTools Farsight DNSDB RRSET',
+	_RDATA_REST_MSG_NAME: 'DomainTools Farsight DNSDB RDATA',
+	_SOURCE_ENGINE: 'DomainTools DNSDB API',
+	_SOURCE_ENGINE_VERSION: 'v2',
+	_INTEGRATION_ID: null,
+	_CAPABILITY_IMPLEMENTATION_ID: null,
+	_ENRICH_CAPABILITY_ID: "9ad183640b1003009f66e94685673af4",
+	_ENRICHMENT_MAPPING_ID: '64b088940715b1101739fc289c1ed0db',
+	_FORMAT: 'json',
+	_DOMAIN_OBS_TYPE: '555d47809f81120035c6786f957fcf72',
+	_IP_OBS_TYPE: '5d0b43809f81120035c6786f957fcf71',
+	_SHA1_OBS_TYPE: '392d47809f81120035c6786f957fcf0e',
+	_OBS_TYPE_URL: 'ec9d47809f81120035c6786f957fcfa7',
+	_DOMAIN_TYPE: "Domain name",
+	_JSON_UTIL: new global.JSON(),
+	_OBS_TYPE_PARAM_MAPPING: {
+		'5d0b43809f81120035c6786f957fcf71': 'ip', //IP address
+		'ec9d47809f81120035c6786f957fcfa7': 'name', // URL type (needs to be stripped to domain)
+		'555d47809f81120035c6786f957fcf72': 'name' // Domain type
+	},
+
+	/**
+	 * Constructor for this class. This RiskIQ implementation is inheritently dependent
+	 * on an implementation ID (capability framework) and a domain ID to locate the correct
+	 * integration configuration record and the credentials for the integration that are
+	 * associated with it.
+	 *
+	 * @param  implId     Implementation ID assigned by the capability framework
+	 * @param  domainId   Domain ID of the domain the actions of the script are suppossed to run in 
+	 */
+	initialize: function(implId, domainId) {
+        if (gs.nil(implId))
+            gs.error(gs.getMessage("error_impl_id"));
+
+        var intId = null;
+        var gr = new GlideRecord('sn_sec_cmn_integration_capability_implementation');
+        if (gr.get(implId))
+            intId = gr.getValue('integration');
+
+        if (gs.nil(intId))
+            gs.error(gs.getMessage("error_integration_id"));
+
+        this._CAPABILITY_IMPLEMENTATION_ID = implId;
+        this._INTEGRATION_ID = intId;
+        var credentials = this._getCredentials(intId, domainId);
+        this._API_KEY = credentials.api_key;
+
+        if (gs.nil(this._API_KEY)) {
+            gs.error(gs.getMessage("Error: DomainTools DNSDB script include cannot locate API key for integration with ID {0}", [intId]));
+        }
+
+        if (!gs.nil(domainId))
+            this._DOMAIN_ID = domainId;
+    },
+	performLookup: function(trackingId, observableId, domainId, taskSysId, record_type, limit, lookback, wfContextId, wfContextName) {
+		gs.info('inside perform lookup');
+		gs.info(lookback);
+		gs.info(record_type);
+		var success = this._createWorkflowResponse("", false);
+	
+		var obsGr = new GlideRecord('sn_ti_observable');
+		if (!obsGr.get(observableId))
+			return success;
+	
+		var trackingGr = this._getTrackingGr(trackingId);
+		var paramName = this.getLookupType(obsGr);
+		var resultData = {}
+		if (!gs.nil(paramName) && !gs.nil(obsGr.value)) {
+			var obsType = obsGr.type+'';
+			gs.info(obsType);
+			gs.info('line no 74');
+			if (obsType == this._OBS_TYPE_URL || obsType == this._DOMAIN_OBS_TYPE){
+				gs.info("line no 77");
+				var request_rrset = this._buildBasicsReportRequetRRSET(paramName, obsGr, record_type, limit, lookback);//can be refactor
+				var request_rdata = this._buildBasicReportRequestRDATA(paramName, obsGr, record_type, limit, lookback);
+				var resultDatarrset = this._retrieveLookupResults(request_rrset);
+				var resultDatardata = this._retrieveLookupResults(request_rdata);
+				resultData.rrset = resultDatarrset.contents;
+				resultData.rdata = resultDatardata.contents;
+				success = this._processLookupReport(trackingGr, obsGr, resultData, wfContextId, wfContextName);
+			}
+			else if(obsType == this._IP_OBS_TYPE){
+				var request_rdata = this._buildBasicReportRequestRDATA(paramName, obsGr, record_type, limit);
+				var resultDatardata = this._retrieveLookupResults(request_rdata);
+				resultData.rdata = resultDatardata.contents;
+				success = this._processLookupReport(trackingGr, obsGr, resultData, wfContextId, wfContextName);
+			}
+			/*var request = this._buildBasicReportRequest(paramName, obsGr);
+			var resultData = this._retrieveLookupResults(request);
+			success = this._processLookupReport(trackingGr, obsGr, resultData, wfContextId, wfContextName);*/
+		}
+		gs.info('line no 98');
+		return success;
+	},
+	_createWorkflowResponse: function(rawData, success) {
+		return {
+			'rrset': {
+			'response_data': rawData,
+			'success': success,
+			'mapping_id': this._ENRICHMENT_MAPPING_ID
+			},
+			'rdata': {
+			'response_data': rawData,
+			'success': success,
+			'mapping_id': this._ENRICHMENT_MAPPING_ID
+			}
+		};
+	},
+	_getTrackingGr: function(trackingId) {
+		var trackingGr = new GlideRecord('sn_sec_cmn_integration_capability_execution');
+		if (!gs.nil(trackingId) && trackingGr.get(trackingId))
+			return trackingGr;
+		return null;
+	},
+	getLookupType: function(obsGr) {
+		var lookupType = null;
+		var obsType = obsGr.getValue('type');
+		return this._OBS_TYPE_PARAM_MAPPING[obsType];
+	},
+	_buildBasicsReportRequetRRSET: function(paramName, obsGr, record_type, limit, lookback) {
+		var searchValue = obsGr.value+'';
+		var obsType = obsGr.type+'';
+		if (obsType == this._OBS_TYPE_URL || obsType == this._OBS_TYPE_DOMAIN) 
+		{
+			searchValue = searchValue.replace(/^(?:https?|ftp)\:\/\//i, "");
+			searchValue = searchValue.replace(/^\www\./i, "");
+			searchValue = searchValue.replace(/^\*\./, "");
+			searchValue = searchValue.split('/')[0];
+		}
+		var restMessage = new sn_ws.RESTMessageV2(this._RRSET_REST_MSG_NAME, 'get');	
+		var endpoint = restMessage.getEndpoint();
+		var final_endpoint = endpoint+"/"+ paramName+ "/"+ searchValue +"/"+ record_type;
+		gs.info(final_endpoint);
+
+		restMessage.setEndpoint(final_endpoint);
+		//restMessage.setStringParameter(paramName, searchValue);
+		restMessage.setStringParameter('x-api-key', this._API_KEY);
+		restMessage.setStringParameter('limit', limit);
+		//restMessage.setStringParameter('time_last_after', this.convert_to_epoch(lookback));
+		
+		return restMessage;
+	},
+	_buildBasicReportRequestRDATA: function(paramName, obsGr, record_type, limit, lookback) {
+		var searchValue = obsGr.value+'';
+		gs.info("lookback"+String(lookback));
+		var obsType = obsGr.type+'';
+		if (obsType == this._OBS_TYPE_URL || obsType == this._OBS_TYPE_DOMAIN) 
+		{
+			searchValue = searchValue.replace(/^(?:https?|ftp)\:\/\//i, "");
+			searchValue = searchValue.replace(/^\www\./i, "");	
+			searchValue = searchValue.replace(/^\*\./, "");
+			searchValue = searchValue.split('/')[0];
+		}
+		var restMessage = new sn_ws.RESTMessageV2(this._RDATA_REST_MSG_NAME, 'get');	
+		var endpoint = restMessage.getEndpoint();
+		var final_endpoint = endpoint+"/"+ paramName+ "/"+ searchValue +"/"+ record_type;
+		gs.info(final_endpoint);
+		gs.info(this._API_KEY)
+		restMessage.setEndpoint(final_endpoint);
+		//restMessage.setStringParameter(paramName, searchValue);
+		restMessage.setStringParameter('x-api-key', this._API_KEY);
+		restMessage.setStringParameter('limit', limit);
+		restMessage.setStringParameter('time_last_after', this.convert_to_epoch(lookback));
+
+		return restMessage;
+	},
+	_retrieveLookupResults: function(restMessage) {
+		try {
+			var response = restMessage.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			gs.info("statusdnsdn"+String(httpStatus));
+			gs.info(response.getErrorMessage());
+			if (httpStatus != "200")
+				throw new Error(response.getErrorMessage());
+			var response_objects = [];
+			responseBody.split('\n').forEach(line => {
+				gs.info("INSIDE RESPONSEBODY");
+				line = line.trim();
+				if (line.startsWith('{"obj":'))
+				{
+					var obj = JSON.parse(line).obj;
+					gs.info(String(obj));
+					response_objects.push(obj);
+				}
+			});
+			gs.info("length "+String(response_objects.length));
+			return {
+				"contents": response_objects,
+				"contentType": "json"
+			};
+		} catch (ex) {
+			var message = ex.name + ": " + ex.message;
+			var resp = {
+				error: message
+			};
+			var json = new global.JSON();
+			var response = json.encode(resp);
+			return {
+				"contents": response
+			};
+		}
+	},
+	_processLookupReport: function(trackingGr, obsGr, responseData, wfContextId, wfContextName) {
+		gs.info('inside_proceess');
+		var statusMessage = null;
+		if(gs.nil(responseData)) {
+			gs.info('line 199');
+			this._updateTracking(trackingGr, responseData, 'error', "unknown", gs.getMessage("Error: An error occurred. Observable: {0}",[obsGr.getValue("value")]), null);
+			
+			// Add error worknotes to SI if applicable
+			if (!gs.nil(wfContextId) && !gs.nil(wfContextName)) {
+
+				statusMessage = gs.getMessage("Error: Unsuccessful response from server. Observable: {0}",[obsGr.getValue("value")]);
+				var msgText = gs.getMessage('Workflow {0} execution error: {1}', ['$name', statusMessage]);
+				var errMsg = new sn_sec_cmn_orch.SecurityOrchestrationUtils().constructWorkflowWorknoteMessage(wfContextId, wfContextName, msgText);
+				new sn_sec_cmn_orch.SecurityOrchestrationUtils().updateTaskWorknotes(trackingGr.task + '', errMsg);
+			}
+			return this._createWorkflowResponse(responseData, false);
+		} else if (responseData != null) {
+			gs.info('line 212');
+			var domainNames = [];
+			var obsType = obsGr.type+'';
+			if (obsType == this._OBS_TYPE_URL || obsType == this._DOMAIN_OBS_TYPE){
+				gs.info('line 216')
+				var response_rrset = responseData.rrset;
+				var response_rdata = responseData.rdata;
+				for (var i = 0; i < response_rrset.length; i++){
+					var result = response_rrset[i];
+					this._createDNSDBRRSETRecords(obsGr.getUniqueValue(), result);
+					var summary = this._createSummary_rrset(result);
+					var resultGr = this._createObservableEnrichmentResult(obsGr.getUniqueValue(), result, summary);
+					if (!gs.nil(resultGr))
+						domainNames.push(result.rrname);
+				}
+				gs.info('line 227');
+				for (var j = 0; j < response_rdata.length; j++){
+					var result = response_rdata[j];
+					this._createDNSDBRDATARecords(obsGr.getUniqueValue(), result);
+					var summary = this._createSummary_rdata(result);
+					var resultGr = this._createObservableEnrichmentResult(obsGr.getUniqueValue(), result, summary);
+					if (!gs.nil(resultGr))
+						domainNames.push(result.rrname);
+				}
+				}
+			else if(obsType == this._IP_OBS_TYPE){
+				var response_rdata = responseData.rdata;
+				for (var i = 0; i < response_rdata.length; i++){
+					var result = response_rdata[i];
+					this._createDNSDBRDATARecords(obsGr.getUniqueValue(), result);
+					var summary = this._createSummary_rdata(result);
+					var resultGr = this._createObservableEnrichmentResult(obsGr.getUniqueValue(), result, summary);
+					if (!gs.nil(resultGr))
+						domainNames.push(result.rrname);
+					}
+				}
+			/*for (var i = 0; i < response.length; i++) {
+				var result = response[i];
+				if (!gs.nil(result.domain)) {
+					//this._createObservable(result.domain, this._DOMAIN_OBS_TYPE, obsGr);
+				
+					var summary = this._createSummary(result);
+					var resultGr = this._createObservableEnrichmentResult(obsGr.getUniqueValue(), result, summary);
+	
+					if (!gs.nil(resultGr))
+						domainNames.push(result.rrname);
+				}				
+			}*/
+			var detailMsg = gs.getMessage('no_domains');
+			
+			// If no domains were found, will create a observable enrichment result as well
+			if (responseData.rrset){
+				if (responseData.rrset.length == 0)
+					this._createObservableEnrichmentResult(obsGr.getUniqueValue(), responseData.rrset, detailMsg);
+				}
+			if (responseData.rdata.length == 0)
+				this._createObservableEnrichmentResult(obsGr.getUniqueValue(), responseData.rdata, detailMsg);
+			
+			if (domainNames.length > 0)
+				detailMsg = gs.getMessage("Created entries for the following domains:\n {0}", obsGr.getValue("value"));
+			var trackingOk = this._updateTracking(trackingGr, responseData, 'complete', "success", gs.getMessage("Lookup completed and passed. Observable: {0}",[obsGr.getValue("value")]), detailMsg);
+			
+			return this._createWorkflowResponse(responseData, trackingOk);
+		} else  {
+			// Add error worknotes to SI if applicable
+			if (!gs.nil(wfContextId) && !gs.nil(wfContextName)) {
+				statusMessage = gs.getMessage("Error: Unexpected 'DomainTools' API response format. Observable: {0}",[obsGr.getValue("value")]);
+				var msgText2 = gs.getMessage('Workflow {0} execution error: {1}', ['$name', statusMessage]);
+				var errMsg2 = new sn_sec_cmn_orch.SecurityOrchestrationUtils().constructWorkflowWorknoteMessage(wfContextId, wfContextName, msgText2);
+				new sn_sec_cmn_orch.SecurityOrchestrationUtils().updateTaskWorknotes(trackingGr.task + '', errMsg2);
+			}
+			
+			this._updateTracking(trackingGr, responseData, 'error', "unknown", statusMessage, null);
+			return this._createWorkflowResponse(responseData, false);
+		}
+	},
+	_updateTracking: function(trackingGr, rawData, state, substate, statusMessage, detailsMessage) {
+        if (!gs.nil(detailsMessage))
+            statusMessage += '\n\n' + detailsMessage;
+
+        trackingGr.setValue('state', state);
+        trackingGr.setValue('substate', substate);
+        trackingGr.setValue('status_message', statusMessage);
+        trackingGr.setValue('raw_data', rawData);
+        return trackingGr.update() ? true : false;
+    },
+	_createObservable: function(value, type, refObsGr) {
+        var gr = new GlideRecord('sn_ti_observable');
+        gr.addQuery('value', value);
+        gr.addQuery('type', type);
+        gr.query();
+        if (!gr.next()) {
+            gr = new GlideRecord('sn_ti_observable');
+            gr.initialize();
+            gr.setValue('value', value);
+            gr.setValue('type', type);
+            gr.setValue('finding', 'Unknown');
+            gr.setValue('notes', gs.getMessage("Adjacent observable to '{0}' of type {1}", [refObsGr.getValue('value'), refObsGr.getDisplayValue('type')]));
+            gr = gr.insert() ? gr : null;
+        }
+        if (gr) {
+            var m2m = new GlideRecord('sn_ti_m2m_observables');
+            m2m.initialize();
+            m2m.setValue('parent', refObsGr.getUniqueValue());
+            m2m.setValue('child', gr.getUniqueValue());
+            m2m = m2m.insert() ? m2m : null;
+        }
+        return !gs.nil(gr);
+    },
+	_createSummary_rrset: function(result) {
+		var summaryArr = [];
+		if (!gs.nil(result.rrname));
+			summaryArr.push(gs.getMessage("RR Name: {0}", result.rrname));
+		if(!gs.nil(result.rrtype))
+			summaryArr.push(gs.getMessage("RR Type: {0}", result.rrtype));
+		return summaryArr.join('\n');
+	},
+	_createSummary_rdata: function(result) {
+		var summaryArr = [];
+		if (!gs.nil(result.rrname));
+			summaryArr.push(gs.getMessage("RR Name: {0}", result.rrname));
+		if(!gs.nil(result.rrtype))
+			summaryArr.push(gs.getMessage("RR Type: {0}", result.rrtype));
+		return summaryArr.join('\n');
+	},
+	isValidClass: function() {
+        return !gs.nil(this._INTEGRATION_ID);
+    },
+	_createObservableEnrichmentResult: function(observableId, rawEngineResult, summary) {
+        var gr = new GlideRecord('sn_ti_observable_enrichment_result');
+        gr.initialize();
+        gr.setValue('observable', observableId);
+        gr.setValue('summary', summary);
+        gr.setValue('data_type', this._FORMAT);
+        gr.setValue('retrieval_date', gr.getValue('sys_updated_on'));
+        gr.setValue('raw_data', this._JSON_UTIL.encode(rawEngineResult));
+        gr.setValue('sys_domain', this._DOMAIN_ID);
+        gr.setValue('vendor', this._INTEGRATION_ID);
+        return gr.insert() ? gr : null;
+    },
+	_createDNSDBRRSETRecords: function(observableId, result){
+		var tableName = "x_952688_dnsdb_domaintools_farsight_dnsdb_rrset";
+		var gr = new GlideRecord(tableName);
+		gr.initialize;
+		gr.setValue('sys_id', observableId);
+		gr.setValue('id', observableId);
+		gr.setValue('count', result.count);
+		gr.setValue('rdata', result.rdata);
+		if ('zone_time_last' in result.data || 'zone_time_first' in result.data){
+			gr.setValue('last_seen', this.human_readable_date(result.zone_time_last));
+			gr.setValue('first_seen', this.human_readable_date(result.zone_time_first));
+		}
+		else {
+			gr.setValue('last_seen', this.human_readable_date(result.time_last));
+			gr.setValue('first_seen', this.human_readable_date(result.time_first));
+		}
+		gr.setValue('rr_name', result.rrname);
+		gr.setValue('rr_type', result.rrtype);
+		gr.setValue('bailiwick', result.bailiwick);
+		gr.insert();
+
+	},
+	_createDNSDBRDATARecords: function(observableId, result){
+		var tableName = "x_952688_dnsdb_domaintools_farsight_dnsdb_rdata";
+		var gr = new GlideRecord(tableName);
+		gr.initialize;
+		gr.setValue('sys_id', observableId);
+		gr.setValue('id', observableId);
+		gr.setValue('count', result.count);
+		gr.setValue('rdata', result.rdata);
+		if ('zone_time_last' in result.data || 'zone_time_first' in result.data){
+			gr.setValue('last_seen', this.human_readable_date(result.zone_time_last));
+			gr.setValue('first_seen', this.human_readable_date(result.zone_time_first));
+		}
+		else {
+			gr.setValue('last_seen', this.human_readable_date(result.time_last));
+			gr.setValue('first_seen', this.human_readable_date(result.time_first));
+		}
+		// gr.setValue('last_seen', this.human_readable_date(result.time_last));
+		// gr.setValue('first_seen', this.human_readable_date(result.time_first));
+		gr.setValue('rr_name', result.rrname);
+		gr.setValue('rr_type', result.rrtype);
+		gr.setValue('bailiwick', result.bailiwick);
+		gr.insert();
+	},
+	human_readable_date: function(epochTimestamp){
+		const date = new Date(epochTimestamp * 1000);
+		const year = date.getFullYear();
+		const month = String(date.getMonth() + 1).padStart(2, '0');
+		const day = String(date.getDate()).padStart(2, '0');
+		const hours = String(date.getHours()).padStart(2, '0');
+		const minutes = String(date.getMinutes()).padStart(2, '0');
+		const seconds = String(date.getSeconds()).padStart(2, '0');
+		const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+		return formattedDate;
+	},
+	convert_to_epoch: function(days){
+		const secondsPerDay = 86400; // Number of seconds in a day
+		const epochTimeInSeconds = Math.floor((Date.now() / 1000) - (days * secondsPerDay));
+		gs.info("epochTimeInSeconds"+String(epochTimeInSeconds))
+		return epochTimeInSeconds;
+	},
+	filterUnsupportedObservablesByType: function(observableIds) {
+		arrOfTypes = Object.keys(this._OBS_TYPE_PARAM_MAPPING);
+        if (gs.nil(observableIds))
+            return [];
+
+        var filteredObservableIds = [];
+        var gr = new GlideRecord('sn_ti_observable');
+        gr.addQuery('sys_id', 'IN', observableIds).addCondition('type', 'IN', arrOfTypes.join(','));
+        gr.query();
+        while (gr.next())
+            filteredObservableIds.push(gr.getUniqueValue() + '');
+		gs.info("inside unsup");
+		gs.info(filteredObservableIds);
+        return filteredObservableIds;
+    },
+	isEnrichmentUpdatedInLast24Hours: function(observableId) {
+        var enrichmentUpdated = false;
+
+        /*var now = new GlideDateTime();
+        now.subtract(60000 * 60 * 24); //subtract 24 hour
+
+        var gr = new GlideRecord('sn_sec_cmn_integration_capability_execution');
+
+        var grJQ = gr.addJoinQuery('sn_sec_cmn_m2m_capability_execution_record');
+
+        gr.addQuery('capability', this._ENRICH_CAPABILITY_ID);
+        gr.addQuery('capability_implementation', this._CAPABILITY_IMPLEMENTATION_ID);
+        gr.addQuery('state', 'complete');
+        gr.addQuery('substate', 'success');
+        gr.addQuery('sys_created_on', ">=", now.getValue());
+        gr.addQuery('sys_domain', this._DOMAIN_ID);
+
+        grJQ.addCondition('record_id', observableId);
+
+        gr.query();
+        if (gr.next())
+            enrichmentUpdated = true;*/
+        return enrichmentUpdated;
+    },
+	_getCredentials: function(intId, domainId) {
+		var credentials = {};
+		var config = new GlideRecord("sn_sec_core_integration_item_config");
+		config.addQuery("name", "IN", "apiKey");
+		config.addQuery("integration", intId);
+		if (!gs.nil(domainId))
+			config.addQuery("sys_domain", domainId);
+		config.query();
+		if (config.hasNext()) {
+			while (config.next()) {
+				if (config.getValue('name') == 'apiKey')
+					credentials.api_key = config.getElement('password_value').getDecryptedValue();
+			}
+		} else if (domainId != 'global'){
+			return this._getCredentials(intId, 'global');
+		}
+		return credentials;
+	},
+	type: 'DomainToolsDNSDBLookup'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 08:44:08</sys_created_on>
+        <sys_id>85fc78d693c00210524174418bba108c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>DomainToolsFarsightDNSDBConfiguration</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>sys_script_include_85fc78d693c00210524174418bba108c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-02 07:12:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

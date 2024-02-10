@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_sec_cmn_integration_capability_implementation">
+    <sn_sec_cmn_integration_capability_implementation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_info>DomainTools Farsight DNSDB supports Address,  Host name, domain, URL observable type.</additional_info>
+        <capability display_value="Enrich Observable">9ad183640b1003009f66e94685673af4</capability>
+        <integration display_value="DomainTools Farsight DNSDB">e545f0de93800210524174418bba1010</integration>
+        <maximum_concurrent_requests>1</maximum_concurrent_requests>
+        <name>DomainTools Farsight DNSDB</name>
+        <order>100</order>
+        <sys_class_name>sn_sec_cmn_integration_capability_implementation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 11:16:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>ad606d1e93440210524174418bba10d3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>DomainTools Farsight DNSDB</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_update_name>sn_sec_cmn_integration_capability_implementation_ad606d1e93440210524174418bba10d3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 11:17:29</sys_updated_on>
+        <workflow display_value="Enrich Observable-DomainTools Farsight DNSDB">c39a595693440210524174418bba10f3</workflow>
+    </sn_sec_cmn_integration_capability_implementation>
+</record_update>

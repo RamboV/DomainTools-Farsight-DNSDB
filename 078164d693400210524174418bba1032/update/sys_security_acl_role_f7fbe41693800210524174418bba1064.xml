@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 07:26:14</sys_created_on>
+        <sys_id>f7fbe41693800210524174418bba1064</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_952688_dnsdb_domaintools_farsight_dnsdb_rdata.x_952688_dnsdb.domaintools_farsight_dnsdb_rdata_user</sys_name>
+        <sys_package display_value="DomainTools Farsight DNSDB" source="x_952688_dnsdb">078164d693400210524174418bba1032</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DomainTools Farsight DNSDB">078164d693400210524174418bba1032</sys_scope>
+        <sys_security_acl display_value="x_952688_dnsdb_domaintools_farsight_dnsdb_rdata">fbfbe41693800210524174418bba1061</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_f7fbe41693800210524174418bba1064</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 07:26:14</sys_updated_on>
+        <sys_user_role display_value="x_952688_dnsdb.domaintools_farsight_dnsdb_rdata_user" name="x_952688_dnsdb.domaintools_farsight_dnsdb_rdata_user">3ffb601693800210524174418bba10b0</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
